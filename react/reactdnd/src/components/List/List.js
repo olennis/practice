@@ -3,6 +3,7 @@ import { CssBaseline, Paper } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import Title from "./Title";
 import Card from "./Card";
+import InputContainer from "./InputContainer";
 const List = () => {
   const useStyles = makeStyles((theme) => ({
     root: {
@@ -20,7 +21,7 @@ const List = () => {
         <Card></Card>
         <Card></Card>
         <Card></Card>
-        <div></div>
+        <InputContainer></InputContainer>
       </Paper>
     </div>
   );
