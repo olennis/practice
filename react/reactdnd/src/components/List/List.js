@@ -4,7 +4,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import Title from "./Title";
 import Card from "./Card";
 import InputContainer from "./InputContainer";
-const List = () => {
+const List = ({ list }) => {
   const useStyles = makeStyles((theme) => ({
     root: {
       width: "300px",
@@ -17,11 +17,11 @@ const List = () => {
     <div>
       <Paper className={classes.root}>
         <CssBaseline></CssBaseline>
-        <Title></Title>
-        <Card></Card>
-        <Card></Card>
-        <Card></Card>
-        <InputContainer></InputContainer>
+        <Title title={list.title}></Title>
+        {list.cards.map((card) => (
+          <Card key={card.id} card={card}></Card>
+        ))}
+        <InputContainer listId={list.id}></InputContainer>
       </Paper>
     </div>
   );

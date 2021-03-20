@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { fade, makeStyles } from "@material-ui/core/styles";
 import InputCard from "./InputCard";
 
-const InputContainer = () => {
+const InputContainer = ({ listId }) => {
   const [open, setOpen] = useState(false);
   const useStyles = makeStyles((theme) => ({
     addCard: {
@@ -24,7 +24,7 @@ const InputContainer = () => {
   return (
     <div className={classes.root}>
       <Collapse in={open}>
-        <InputCard setOpen={setOpen}></InputCard>
+        <InputCard setOpen={setOpen} listId={listId}></InputCard>
       </Collapse>
       <Collapse in={!open}>
         <Paper
