@@ -10,9 +10,9 @@ const AddButton = ({ data, setData }) => {
       checked: true,
     };
     setInputValue(tempObj);
-    nextId++;
   };
   const onClick = () => {
+    nextId++;
     setData(data.concat(inputValue));
     setInputValue({});
     setIsInput(false);
