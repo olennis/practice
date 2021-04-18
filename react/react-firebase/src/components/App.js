@@ -1,10 +1,11 @@
 import { useState } from "react";
-import { Route } from "react-router-dom";
-import AppRouter from "./Router";
+import AppRouter from "components/Router";
+import { authService } from "fbase";
 function App() {
+  const [isLogin, setIsLogin] = useState(authService.currentUser);
   return (
     <div className="App">
-      <AppRouter></AppRouter>
+      <AppRouter isLogin={isLogin}></AppRouter>
     </div>
   );
 }
