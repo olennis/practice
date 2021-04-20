@@ -3,6 +3,8 @@ import React, { useState } from "react";
 const Auth = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [chceckPassword, setCheckPassword] = useState("");
+  const [newAccount, setNewAccount] = useState(true);
   const onSubmit = (event) => {
     event.preventDefault();
   };
@@ -15,6 +17,8 @@ const Auth = () => {
       setEmail(value);
     } else if (name === "password") {
       setPassword(value);
+    } else if (name === "password check") {
+      setCheckPassword(value);
     }
   };
   return (
@@ -22,7 +26,7 @@ const Auth = () => {
       <form onSubmit={onSubmit}>
         <input
           name="email"
-          type="text"
+          type="email"
           placeholder="Email"
           value={email}
           onChange={onChange}
@@ -34,7 +38,18 @@ const Auth = () => {
           value={password}
           onChange={onChange}
         />
-        <input type="submit" value="login"></input>
+        <input
+          name="password check"
+          type="password"
+          placeholder="password check"
+          value={chceckPassword}
+          onChange={onChange}
+        />
+        {password === chceckPassword ? <div>success</div> : <div>fail</div>}
+        <input
+          type="submit"
+          value={newAccount ? "Create New Account" : "Log in"}
+        />
       </form>
     </div>
   );
