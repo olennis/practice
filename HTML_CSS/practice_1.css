@@ -1,64 +1,81 @@
+header {
+  margin: 0 auto;
+  max-width: 1440px;
+  background-color: red;
+}
 li {
   list-style: none;
 }
-.test li {
-  float: left;
-
-  margin-left: 5px;
-}
-.test li a::after {
-  width: 100%;
-  height: 3px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  content: "";
-  background-color: black;
-}
-
-a {
-  color: black;
-  text-decoration: none;
+.menu {
   position: relative;
-  padding: 5px 5px 3px 2px;
+  margin: 0 15px;
 }
-.util {
+.menu_ul {
   float: right;
 }
-ul {
-  padding-left: 0;
+.menu_ul_li {
+  float: left;
+  padding: 12px 15px 0 15px;
+  position: relative;
+  margin-left: 17px;
+}
+.menu_ul_li:after {
+  content: "";
+  background: black;
+  position: absolute;
+  top: 0;
+  height: 3px;
+  width: 100%;
+  left: 0;
+}
+.sns_btn {
+  padding: 0;
+}
+.sns_btn li {
+  float: left;
+  padding-left: 5px;
 }
 
-.gnb {
+.nav {
   clear: both;
   max-width: 1440px;
-  margin: 0 auto;
+
+  margin: 0 15px;
   height: 120px;
   position: relative;
   background: #fff;
   z-index: 100;
 }
-.gnb .logo {
+.nav .logo {
   position: absolute;
   top: 28px;
   left: 0;
 }
-.gnb .nav {
-  padding: 50px 0 0 200px;
+.nav_bar {
+  padding: 50px 0 0 300px;
 }
-.gnb .nav ul li {
-  float: left;
-}
-.gnb .login {
-  top: 28px;
-  position: absolute;
-  right: 5px;
-}
-.gnb .login ul {
+.nav_bar ul {
   margin: 0;
   padding: 0;
 }
-.gnb .login ul li {
+.nav_bar ul li {
+  float: left;
+  margin-right: 35px;
+  font-size: 22px;
+  color: #222222;
+  font-family: "notokr-medium";
+  transition: 0.2s;
+}
+
+.nav .login {
+  position: absolute;
+  right: 5px;
+}
+.nav .login ul {
+  margin: 0;
+  padding: 0;
+}
+.nav .login li {
   display: inline-block;
   margin-right: 10px;
   vertical-align: middle;
