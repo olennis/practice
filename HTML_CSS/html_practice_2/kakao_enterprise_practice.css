@@ -1,15 +1,207 @@
-header {
-  margin: 30px 50px;
+/* reset css */
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+textarea,
+p,
+blockquote,
+th,
+td,
+input,
+select,
+button {
+  margin: 0;
+  padding: 0;
 }
+fieldset,
+img {
+  border: 0 none;
+}
+dl,
+ul,
+ol,
+menu,
 li {
   list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+input,
+select,
+textarea,
+button {
+  vertical-align: middle;
+}
+input::-ms-clear {
+  display: none;
+}
+button {
+  border: 0 none;
+  background-color: transparent;
+  cursor: pointer;
+}
+body {
+  background: #fff;
+}
+body,
+th,
+td,
+input,
+select,
+textarea,
+button {
+  font-size: 12px;
+  line-height: 1.5;
+  font-family: "돋움", dotum, sans-serif;
+  color: #333;
+} /* color값은 디자인가이드에 맞게사용 */
+a {
+  color: #333;
+  text-decoration: none;
+}
+a:active,
+a:hover {
+  text-decoration: underline;
+}
+a:active {
+  background-color: transparent;
+}
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+var {
+  font-style: normal;
+  font-weight: normal;
+}
+/* reset css */
+
+h1 {
+  color: black;
+  width: 300px;
+  left: 100px;
+  float: left;
+  background-color: red;
+}
+.screen_out {
+  overflow: hidden;
+
+  line-height: 0;
+  text-indent: -9999px;
+}
+
+header {
+  vertical-align: middle;
+  margin: 50px 30px;
+  text-align: center;
+  overflow: hidden;
+  height: 100px;
+}
+main {
+  text-align: center;
+}
+footer {
+  margin: 200px 120px;
+  vertical-align: middle;
+  line-height: 50px;
+}
+
+ul {
+  overflow: hidden;
+  display: inline-block;
+}
+li {
   float: left;
   margin-left: 100px;
 }
-.logo {
+.nav_bar {
+  font-size: 15px;
+
+  background-color: violet;
+}
+hr {
+  color: gray;
+}
+
+.home_img {
+  width: 95%;
+  margin-bottom: 100px;
+  margin-top: 100px;
+  text-align: center;
+  height: 1000px;
+}
+.contents_section {
+  width: 700px;
+  max-height: 500px;
+  margin-left: 40px;
   display: inline-block;
 }
-.nav_bar {
-  display: inline-block;
-  margin-left: 150px;
+.contents_section .contents_section_name_visible {
+  width: 100%;
+  text-indent: 0;
+  text-align: left;
+  font-size: 15px;
+}
+img {
+  width: 100%;
+  height: 80%;
+}
+.contents_wrapper {
+  position: relative;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  height: 150px;
+  width: 700px;
+}
+.contents_wrapper strong {
+  display: -webkit-box;
+  overflow: hidden;
+  font-size: 25px;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  text-align: left;
+}
+.contents_wrapper p {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  margin-top: 10px;
+  text-align: left;
+}
+
+footer ul {
+  margin-top: 30px;
+}
+.footer_logo {
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
 }
