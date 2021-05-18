@@ -103,105 +103,68 @@ var {
 }
 /* reset css */
 
-h1 {
-  color: black;
-  width: 300px;
-  left: 100px;
-  float: left;
-  background-color: red;
-}
 .screen_out {
-  overflow: hidden;
-
-  line-height: 0;
   text-indent: -9999px;
+  width: 0;
+  height: 0;
 }
 
 header {
-  vertical-align: middle;
-  margin: 50px 30px;
-  text-align: center;
   overflow: hidden;
-  height: 100px;
+  margin: 30px 200px;
 }
 main {
-  text-align: center;
+  margin: 30px 200px;
 }
 footer {
-  margin: 200px 120px;
-  vertical-align: middle;
-  line-height: 50px;
+  margin: 30px 200px;
+  border-top: 1px solid gray;
 }
 
-ul {
-  overflow: hidden;
-  display: inline-block;
-}
-li {
+.logo {
   float: left;
-  margin-left: 100px;
+  margin-right: 130px;
 }
 .nav_bar {
+  overflow: hidden;
+  line-height: 36px;
   font-size: 15px;
-
-  background-color: violet;
 }
-hr {
-  color: gray;
+.nav_bar ul :last-child {
+  padding-right: 0;
 }
 
+.nav_bar ul li {
+  float: left;
+  margin-left: 110px;
+}
 .home_img {
-  width: 95%;
-  margin-bottom: 100px;
-  margin-top: 100px;
-  text-align: center;
-  height: 1000px;
+  width: 1350px;
+  height: 500px;
 }
 .contents_section {
-  width: 700px;
-  max-height: 500px;
-  margin-left: 40px;
   display: inline-block;
+  width: 400px;
+  margin: 30px 30px;
 }
-.contents_section .contents_section_name_visible {
-  width: 100%;
-  text-indent: 0;
-  text-align: left;
-  font-size: 15px;
+.contents_section:nth-child(3) {
+  margin-right: 0;
 }
-img {
-  width: 100%;
-  height: 80%;
+.section_img {
+  width: 400px;
 }
-.contents_wrapper {
-  position: relative;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  height: 150px;
-  width: 700px;
-}
-.contents_wrapper strong {
+.contents_title {
   display: -webkit-box;
   overflow: hidden;
-  font-size: 25px;
-  -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
-  text-align: left;
-}
-.contents_wrapper p {
-  display: -webkit-box;
-  overflow: hidden;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
-  margin-top: 10px;
-  text-align: left;
-}
-
-footer ul {
-  margin-top: 30px;
-}
-.footer_logo {
   font-weight: bold;
-  font-size: 20px;
-  text-align: center;
+  font-size: 25px;
+  margin: 10px auto;
+}
+.contents_text {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
 }
