@@ -4,12 +4,19 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Document</title>
+    <link rel="stylesheet" href="./common.css"
   </head>
   <body>
-    <div>
+    <div class="direct-link">
+      <!-- 웹접근성용 바로가기 링크 모음 -->
+      <a href="#mainContent">본문 바로가기</a>
+      <a href="#gnbContent">메뉴 바로가기</a>
+    </div>
+    <div class="header_block"></div>
+    <div class="container-doc">
       <header class="doc-header">
-        <h1>ACI | 아시아문화원</h1>
-        <nav>
+        <h1 class="doc-title">ACI | 아시아문화원</h1>
+        <nav id="gnbContent" class="doc-gnb">
           <h2 class="screen_out">메뉴</h2>
           <ul>
             <li><a href="#none">정보공개</a></li>
@@ -20,10 +27,179 @@
             <li><a href="#none">사회적가치</a></li>
             <li><a href="#none">정부혁신</a></li>
           </ul>
-          <span><a href="#none">전체메뉴</a></span>
+          <!-- 수정할것 -->
+          <span id="sideMenu"><a href="#none">전체메뉴</a></span>
+          <!-- 수정할것 -->
         </nav>
       </header>
-      <main></main>
+      <main class="doc-main">
+        <section class="inner-main">
+          <h2 class="screen_out">메인 페이지</h2>
+          <section class="content-feature">
+            <h3 class="screen_out">메인 이미지 및 소개</h3>
+            <div class="img_main">
+              <img />
+              <div class="noti_main"></div>
+            </div>
+            <div class="content_item">
+              <ul>
+                <li>
+                  <div class="img_item"></div>
+                  <strong class="tit_item">연구 및 자원활용 활성화</strong>
+                  <p>아시아 문화 연구 및 자원 아카이빙</p>
+                </li>
+                <li>
+                  <div class="img_item"></div>
+                  <strong class="tit_item">콘텐츠 제작 운영</strong>
+                  <p>진취적인 공연예술 작품의 기획제작</p>
+                </li>
+                <li>
+                  <div class="img_item"></div>
+                  <strong class="tit_item">국내외 교류 유통</strong>
+                  <p>국제 문화외교에 기여 및 설립 목적 달성</p>
+                </li>
+                <li>
+                  <div class="img_item"></div>
+                  <strong class="tit_item">대관</strong>
+                  <p>시민들의 문화향유 기회 확대</p>
+                </li>
+              </ul>
+            </div>
+            <div class="content_introduce">
+              <div class="introduce_box">
+                <a href="#none">
+                  <strong class="tit_introduce">ACI 소개</strong>
+                  <p class="desc_introduce">Asia Culture Institute</p>
+                </a>
+              </div>
+              <div class="introduce_box">
+                <a href="#none">
+                  <strong class="tit_introduce">ACI 프로그램</strong>
+                  <p class="desc_introduce">
+                    연령별 교육, 전시, 공연, 창제작 등 다양한 컨텐츠가 준비되어
+                    있습니다.
+                  </p>
+                </a>
+              </div>
+            </div>
+          </section>
+          <section class="section_information">
+            <h3 class="screen_out">정보 섹션</h3>
+            <div class="information_cont">
+              <div class="header_information">
+                <ul>
+                  <li>공지사항</li>
+                  <li>채용정보</li>
+                  <li>보도자료</li>
+                </ul>
+                <span>+</span>
+              </div>
+              <div class="main_information">
+                <ul>
+                  <li>
+                    <span class="tit_noti">게시글 제목</span>
+                    <span class="date_noti">게시글 날짜</span>
+                  </li>
+                  <li>
+                    <span class="tit_noti">게시글 제목</span>
+                    <span class="date_noti">게시글 날짜</span>
+                  </li>
+                  <li>
+                    <span class="tit_noti">게시글 제목</span>
+                    <span class="date_noti">게시글 날짜</span>
+                  </li>
+                  <li>
+                    <span class="tit_noti">게시글 제목</span>
+                    <span class="date_noti">게시글 날짜</span>
+                  </li>
+                  <li>
+                    <span class="tit_noti">게시글 제목</span>
+                    <span class="date_noti">게시글 날짜</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="popup_information">
+              <div class="tit_popup">
+                <strong>팝업존</strong>
+                <button>x</button>
+              </div>
+              <div class="item_popup"></div>
+            </div>
+          </section>
+          <section class="section_culture">
+            <h3>아시아 문화 이야기</h3>
+            <div class="inner_container">
+              <ul>
+                <li>
+                  <div class="img_culture"></div>
+                  <p class="desc_culture">
+                    [아시아의 문화Ⅱ] 이슬람 문화로 짜여진 터키의 카펫
+                  </p>
+                </li>
+                <li>
+                  <div class="img_culture"></div>
+                  <p class="desc_culture">
+                    [아시아의 문화Ⅱ] 전쟁과 여성의 삶, 비랑고나 이야기
+                  </p>
+                </li>
+                <li>
+                  <div class="img_culture"></div>
+                  <p class="desc_culture">
+                    [아시아의 문화Ⅱ] 표해록, 아시아 해양 문명 네트워크 ‘무한한
+                    상상력’
+                  </p>
+                </li>
+                <li>
+                  <div class="img_culture"></div>
+                  <p class="desc_culture">
+                    [아시아의 문화Ⅱ] 바닷길, 아시아를 잇다
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </section>
+          <section class="section_sidebar">
+            <h3 class="screen_out">사이드 바</h3>
+            <div class="search_sidebar">
+              <div class="tit_search">검색</div>
+              <form>
+                <input type="text" />
+                <button type="submit">검색</button>
+              </form>
+            </div>
+            <div class="quickmenu_sidebar">
+              <div class="tit_quickmenu">Quick Menu</div>
+              <ul>
+                <li class="list_leftside">
+                  <ul>
+                    <li>정부혁신</li>
+                    <li>ACI 소개</li>
+                    <li>사회적가치</li>
+                  </ul>
+                </li>
+                <li class="list_rightside">
+                  <ul>
+                    <li>주요사업</li>
+                    <li>대관안내</li>
+                    <li>사전정보공표</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div class="cs_sidebar">
+              <h3 class="tit_cs">고객센터</h3>
+              <div>1899-5566</div>
+              <div>09:00 - 18:00 / 매주 월 휴무</div>
+              <div>(예매업무 09:00 - 17:00)</div>
+            </div>
+            <div class="etc_sidebar">ACC 도서관</div>
+            <div class="etc_sidebar">ACC 아카이브</div>
+            <div class="logo_sidebar">로고</div>
+          </section>
+        </section>
+      </main>
       <footer></footer>
     </div>
   </body>
