@@ -7,11 +7,7 @@
     <link rel="stylesheet" href="./common.css"
   </head>
   <body>
-    <div class="direct-link">
-      <!-- 웹접근성용 바로가기 링크 모음 -->
-      <a href="#mainContent">본문 바로가기</a>
-      <a href="#gnbContent">메뉴 바로가기</a>
-    </div>
+    
     <div class="header_block"></div>
     <div class="container-doc">
       <header class="doc-header">
@@ -28,7 +24,7 @@
             <li><a href="#none">정부혁신</a></li>
           </ul>
           <!-- 수정할것 -->
-          <span id="sideMenu"><a href="#none">전체메뉴</a></span>
+          <span class="tab_gnb"><a href="#none">전체메뉴</a></span>
           <!-- 수정할것 -->
         </nav>
       </header>
@@ -39,9 +35,21 @@
             <h3 class="screen_out">메인 이미지 및 소개</h3>
             <div class="img_main">
               <img />
-              <div class="noti_main"></div>
+              <div class="wrap_noti">
+                <div class="tit_noti">문화원 소식</div>
+                <div class="tit_notiitem">감사장 수훈</div>
+                <div class="desc_noti">
+                  "코로나 19로 힘든 시기를 보내고 있는 지역사회 아동들의 복지에
+                  기여"
+                </div>
+                <div class="desc_noti">
+                  초록우산 어린이재단, 광주희망재단, 한국사립유치원협의회
+                  2020.12
+                </div>
+              </div>
             </div>
-            <div class="content_item">
+            <section class="cont_item">
+              <h3 class="screen_out">사업 소개</h3>
               <ul>
                 <li>
                   <div class="img_item"></div>
@@ -64,15 +72,16 @@
                   <p>시민들의 문화향유 기회 확대</p>
                 </li>
               </ul>
-            </div>
-            <div class="content_introduce">
-              <div class="introduce_box">
+            </section>
+            <section class="cont_introduce">
+              <h3 class="screen_out">aci 소개</h3>
+              <div class="wrap_introduce">
                 <a href="#none">
                   <strong class="tit_introduce">ACI 소개</strong>
                   <p class="desc_introduce">Asia Culture Institute</p>
                 </a>
               </div>
-              <div class="introduce_box">
+              <div class="wrap_introduce">
                 <a href="#none">
                   <strong class="tit_introduce">ACI 프로그램</strong>
                   <p class="desc_introduce">
@@ -81,11 +90,11 @@
                   </p>
                 </a>
               </div>
-            </div>
+            </section>
           </section>
           <section class="section_information">
             <h3 class="screen_out">정보 섹션</h3>
-            <div class="information_cont">
+            <div class="cont_information">
               <div class="header_information">
                 <ul>
                   <li>공지사항</li>
@@ -120,8 +129,8 @@
               </div>
             </div>
 
-            <div class="popup_information">
-              <div class="tit_popup">
+            <div class="section_popup">
+              <div class="header_popup">
                 <strong>팝업존</strong>
                 <button>x</button>
               </div>
@@ -130,7 +139,7 @@
           </section>
           <section class="section_culture">
             <h3>아시아 문화 이야기</h3>
-            <div class="inner_container">
+            <div class="container_culture">
               <ul>
                 <li>
                   <div class="img_culture"></div>
@@ -160,16 +169,16 @@
               </ul>
             </div>
           </section>
-          <section class="section_sidebar">
+          <section class="content-snb">
             <h3 class="screen_out">사이드 바</h3>
-            <div class="search_sidebar">
+            <div class="snb_search">
               <div class="tit_search">검색</div>
               <form>
-                <input type="text" />
-                <button type="submit">검색</button>
+                <input class="input_search" type="text" />
+                <button class="btn_search" type="submit">검색</button>
               </form>
             </div>
-            <div class="quickmenu_sidebar">
+            <div class="snb_quickmenu">
               <div class="tit_quickmenu">Quick Menu</div>
               <ul>
                 <li class="list_leftside">
@@ -188,19 +197,48 @@
                 </li>
               </ul>
             </div>
-            <div class="cs_sidebar">
+            <div class="snb_cs">
               <h3 class="tit_cs">고객센터</h3>
               <div>1899-5566</div>
               <div>09:00 - 18:00 / 매주 월 휴무</div>
               <div>(예매업무 09:00 - 17:00)</div>
             </div>
-            <div class="etc_sidebar">ACC 도서관</div>
-            <div class="etc_sidebar">ACC 아카이브</div>
-            <div class="logo_sidebar">로고</div>
+            <div class="snb_etc">ACC 도서관</div>
+            <div class="snb_etc">ACC 아카이브</div>
+            <div class="snb_logo">로고</div>
           </section>
         </section>
       </main>
-      <footer></footer>
+      <footer class="doc-footer">
+        <section class="section_footer">
+          <h3>ACI | 아시아문화원</h3>
+          <div class="wrap_footer">
+            <ul class="list_menu">
+              <li><a href="#none">개인정보 처리방침</a></li>
+              <li><a href="#none">오시는길</a></li>
+              <li><a href="#none">이메일무단수집거부</a></li>
+              <li><a href="#none">고객센터</a></li>
+              <li><a href="#none">사이트맵</a></li>
+              <li><a href="#none">국립아시아문화전당 소개</a></li>
+            </ul>
+            <p>
+              광주광역시 동구 문화전당로 38(우편번호) 61485 / TEL 1899-5566 /
+              대표자 이기표 / 사업자 등록번호 616-82-28736
+            </p>
+            <small
+              >Copyright(C) Asia Culture Institute.All right reserved</small
+            >
+          </div>
+
+          <ul class="list_sns">
+            <li><a href="#none">1</a></li>
+            <li><a href="#none">2</a></li>
+            <li><a href="#none">3</a></li>
+            <li><a href="#none">4</a></li>
+            <li><a href="#none">5</a></li>
+          </ul>
+        </section>
+      </footer>
     </div>
   </body>
 </html>
