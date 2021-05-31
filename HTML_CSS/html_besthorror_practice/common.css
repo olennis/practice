@@ -1,0 +1,192 @@
+/* reset */
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+textarea,
+p,
+blockquote,
+th,
+td,
+input,
+select,
+button {
+  margin: 0;
+  padding: 0;
+}
+fieldset,
+img {
+  border: 0 none;
+}
+dl,
+ul,
+ol,
+menu,
+li {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+input,
+select,
+textarea,
+button {
+  vertical-align: middle;
+}
+input::-ms-clear {
+  display: none;
+}
+button {
+  border: 0 none;
+  background-color: transparent;
+  cursor: pointer;
+}
+body {
+  background: #fff;
+}
+body,
+th,
+td,
+input,
+select,
+textarea,
+button {
+  font-size: 12px;
+  line-height: 1.5;
+  font-family: "돋움", dotum, sans-serif;
+  color: #333;
+} /* color값은 디자인가이드에 맞게사용 */
+a {
+  color: #333;
+  text-decoration: none;
+}
+a:active,
+a:hover {
+  text-decoration: underline;
+}
+a:active {
+  background-color: transparent;
+}
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+var {
+  font-style: normal;
+  font-weight: normal;
+}
+
+.container-doc {
+  overflow: hidden;
+}
+.doc-header {
+  float: left;
+  width: 850px;
+  color: #e7473c;
+  position: fixed;
+}
+.doc-title {
+  margin: 50px;
+  font-size: 70px;
+}
+.doc-main {
+  float: left;
+  background-color: #e7473c;
+  width: 1710px;
+  margin-left: 850px;
+}
+.section_header {
+  margin: 600px 50px 30px;
+  width: 350px;
+}
+.tit_header {
+  display: block;
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+.desc_header {
+  display: block;
+  font-size: 15px;
+}
+.doc-gnb {
+  overflow: hidden;
+  margin: 50px;
+}
+.doc-gnb .list_gnb {
+  float: left;
+  margin-right: 10px;
+  color: rgba(0, 0, 0, 0.6);
+  box-shadow: 0 1px 0 rgb(0 0 0 / 60%);
+  text-decoration: underline;
+}
+.article_main {
+  width: 1300px;
+  margin: 100px auto;
+  color: #fff;
+}
+.header_article {
+  overflow: hidden;
+  vertical-align: middle;
+  margin-bottom: 10px;
+}
+
+.tit_article {
+  float: left;
+  font-size: 30px;
+}
+.txt_article {
+  float: right;
+  font-size: 15px;
+  margin: 10px 0;
+}
+.wrapper_img {
+  position: relative;
+}
+.img_article {
+  display: block;
+  background-color: black;
+  height: 1000px;
+}
+.btn_img {
+  position: absolute;
+  color: #fff;
+  top: 50%;
+  right: 50%;
+  font-size: 30px;
+}
+.wrapper_footer {
+  overflow: hidden;
+}
+.footer_article {
+  float: right;
+}
+.footer_article div {
+  float: left;
+  margin-left: 10px;
+}
