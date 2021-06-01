@@ -1,0 +1,196 @@
+
+.doc-header {
+  position: fixed;
+  top: 0;
+  background-color: #fff;
+  z-index: 10;
+}
+.doc-title {
+  font-size: 50px;
+  margin-left: 150px;
+}
+
+.doc-gnb {
+  overflow: hidden;
+  border: 1px solid #808080;
+  height: 60px;
+  line-height: 60px;
+  width: 2000px;
+}
+.list_gnb {
+  float: left;
+  margin: 0 100px;
+  font-size: 20px;
+}
+.list_gnb:first-child {
+  margin-left: 150px;
+}
+
+.doc-main {
+  margin: 150px;
+}
+.section_service {
+  position: relative;
+  overflow: hidden;
+}
+.img_service {
+  width: 900px;
+  height: 500px;
+  border: 1px solid red;
+  float: left;
+}
+.box_service {
+  position: absolute;
+  background-color: green;
+  width: 100px;
+  height: 3px;
+  top: 250px;
+  right: 550px;
+}
+.wrapper_servicetext {
+  margin: 150px 50px;
+  text-align: center;
+  float: left;
+
+  width: 400px;
+}
+.tit_service {
+  font-size: 40px;
+  font-weight: bold;
+}
+.desc_service {
+  font-size: 20px;
+  margin: 30px auto;
+}
+.btn_service,
+.btn_intro {
+  background-color: green;
+  border-radius: 15px;
+  width: 150px;
+  height: 40px;
+  color: white;
+}
+.section_search {
+  text-align: center;
+}
+.header_search {
+  overflow: hidden;
+}
+.wrapper_search {
+  width: 1300px;
+  height: 300px;
+  background-color: #f2f0eb;
+  margin: 0 auto;
+}
+.tab_search {
+  display: block;
+  float: left;
+  width: 635px;
+  height: 50px;
+  font-size: 20px;
+  border: 1px solid blue;
+  margin: 0 5px;
+}
+.list_search {
+  overflow: hidden;
+  margin: 30px auto;
+  border: 1px solid pink;
+  width: 800px;
+}
+.list_search li {
+  width: 160px;
+  float: left;
+  margin: 30px 20px;
+}
+.img_search {
+  height: 100px;
+  border: 1px solid red;
+}
+.section_recommend {
+  text-align: center;
+}
+.wrapper_recommend {
+  width: 1300px;
+  margin: 0 auto;
+}
+.wrapper_recommend ul {
+  overflow: hidden;
+  margin: 0 auto;
+}
+.list_recommend {
+  float: left;
+  width: 415px;
+  border: 1px solid black;
+  margin: 0 5px;
+}
+.list_recommend:first-child {
+  margin-left: 15px;
+}
+.img_recommend {
+  border: 1px solid red;
+  width: 415px;
+  height: 500px;
+}
+.box_recommend {
+  border: 1px solid gray;
+  height: 150px;
+}
+.btn_recommend {
+  display: block;
+  width: 100%;
+  border: 1px solid purple;
+  height: 50px;
+  text-align: center;
+}
+.tit_recommend {
+  font-size: 31px;
+}
+.desc_recommend {
+  color: green;
+  font-size: 20px;
+}
+.wrapper_intro {
+  width: 1300px;
+  margin: 30px auto;
+  overflow: hidden;
+}
+.box_intro {
+  text-align: center;
+  float: left;
+  width: 640px;
+  margin: 0 5px;
+}
+.tit_intro {
+  margin-top: 200px;
+  font-size: 20px;
+  color: green;
+}
+.desc_intro {
+  font-size: 20px;
+  margin: 20px 0;
+}
+.img_intro {
+  border: 1px solid green;
+  float: left;
+  width: 640px;
+  height: 498px;
+}
+.footer_inform {
+  background-color: green;
+  color: white;
+  height: 200px;
+}
+.list_inform {
+  float: left;
+  margin: 40px 300px;
+  font-size: 15px;
+}
+.list_inform::before {
+  content: "---";
+}
+
+.footer_copyright {
+  text-align: center;
+  background-color: gray;
+  height: 200px;
+}
