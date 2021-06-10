@@ -7,7 +7,11 @@
     <link rel="stylesheet" href="./common.css" />
   </head>
   <body>
-    
+    <div class="direct-link">
+      <!-- 웹접근성용 바로가기 링크 모음 -->
+      <a href="#mainContent">본문 바로가기</a>
+      <a href="#gnbContent">메뉴 바로가기</a>
+    </div>
     <div class="bnr_header"></div>
     <div class="container-doc">
       <header class="doc-header">
@@ -23,7 +27,7 @@
             <li><a href="#none">사회적가치</a></li>
             <li><a href="#none">정부혁신</a></li>
           </ul>
-          <div class="wrapper_headermenu">
+          <div class="wrap_menu">
             <a href="#none">
               <img
                 class="img_menu"
@@ -39,59 +43,75 @@
           <h2 class="screen_out">메인 페이지</h2>
           <section class="content-feature">
             <h3 class="screen_out">메인 이미지 및 소개</h3>
-            <div class="img_main" alt="메인 이미지">
-              <button class="btn_prev"><</button>
+            <div class="wrap_feature">
+              <img
+                class="img_main"
+                alt="메인 이미지"
+                src="https://dummyimage.com/1200x520/ffcb6b/000000.jpg"
+              />
+              <button class="btn_prev">
+                <span class="screen_out">메인 이미지 슬라이드 이전 버튼</span><
+              </button>
+              <button class="btn_next">
+                <span class="screen_out">메인 이미지 슬라이드 다음 버튼</span>>
+              </button>
               <div class="wrap_noti">
-                <div class="tit_notimain">문화원 소식</div>
-                <div class="tit_notiitem">감사장 수훈</div>
-                <div class="desc_noti">
+                <strong class="tit_noti">문화원 소식</strong>
+                <strong class="tit_item">감사장 수훈</strong>
+                <p class="desc_noti">
                   "코로나 19로 힘든 시기를 보내고 있는 지역사회 아동들의 복지에
                   기여"
-                </div>
-                <div class="desc_noti">
+                </p>
+                <p class="desc_noti">
                   초록우산 어린이재단, 광주희망재단, 한국사립유치원협의회
                   2020.12
-                </div>
-                <div>
-                  <ul class="list_noti">
-                    <li>
-                      <div><a href="#none"></a></div>
-                    </li>
-                    <li>
-                      <div><a href="#none"></a></div>
-                    </li>
-                    <li>
-                      <div><a href="#none"></a></div>
-                    </li>
-                    <li>
-                      <div><a href="#none"></a></div>
-                    </li>
-                  </ul>
-                </div>
+                </p>
+
+                <ul class="list_paging">
+                  <li>
+                    <button class="btn_paging">
+                      <span class="screen_out">1번 메인이미지 페이징 버튼</span>
+                    </button>
+                  </li>
+                  <li>
+                    <button class="btn_paging">
+                      <span class="screen_out">2번 메인이미지 페이징 버튼</span>
+                    </button>
+                  </li>
+                  <li>
+                    <button class="btn_paging">
+                      <span class="screen_out">3번 메인이미지 페이징 버튼</span>
+                    </button>
+                  </li>
+                  <li>
+                    <button class="btn_paging">
+                      <span class="screen_out">4번 메인이미지 페이징 버튼</span>
+                    </button>
+                  </li>
+                </ul>
               </div>
-              <button class="btn_next">></button>
             </div>
             <section class="cont_item">
-              <h3 class="screen_out">사업 소개</h3>
+              <h4 class="screen_out">사업 소개</h4>
               <ul class="list_content">
                 <li>
                   <a href="#none">
-                    <div class="img_item" alt="콘텐츠 이미지"></div>
-                    <strong class="tit_item">연구 및 자원활용 활성화</strong>
+                    <img class="img_item" alt="콘텐츠 이미지" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAnFBMVEX/3AAAAB//4gD/4AD/5AD/3gD/4QAABh8ACB//5gAABx8AAB792gARFB8ACx99bRhcUhnKrwxzZRfewAkeHh0HDh+kjxLuzgXStgtZTxrDqQ4oJh331QOqlBGBcRa9pA9pXRiMehU8NxwbHB4TFh5QRxpJQhu4nxCOfBU1MRzy0QavmBGXgxR4aRgxLRxAOhskIx3jxAhsXxhNRRpm5ptnAAAD50lEQVR4nO3Y2XajOhAFUJekAmSDZwbbGI/xnMHJ///bLQk7nYdOnnqgc89+sTFZLA4llURaLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD4f2Ctvzz9p+7jt+HT9Px5RG3y+A/ezG+herQ2n53UxYxO/3oVVRXtPk+4ICq/QcK3756w/fBVws4/n9D07gl/JHn/pvcUfoOE4cQnDE7KfXBgLGurfC5J2K0Tqrrfsg6UUR96r6w1uuGPQBL2XcJgQHO5VS7P/Q7R+OCDBedO6r+YYeHyay6yqncp1C2U1qPFfnAyjc5oHn1CnafJJuaW6pPTCZ/kwCVMXEKTEQ10S0/H/iz164FsBkd/+Fh+uWn4y8wwXJoW83PSzeU+9XQ5zctTRuFKihbMQxc7KChdusdQ0PNqPpeH0HNlN2dKx71Dn7ovTZ6s5tUltI8RDQJ3zEozs626T66GWTiOmU9JsvZV46tSQWBXqVtD+ErJJDbK3vI3lSR8NVINyj7epB74hbBOqHd1fVu3Lss5UaFlBqdJPUnnIV2bW0SzDId2ROGjvf3AWiklv/iEl/ZLy/ZCKoL730uBdWtDC0nYSSv/VLhMoyz46dWbwPTDXrxNJveer8r9papWw8QlVJf2LJD6nm/1ZWXy0eg6GktCqWS4rytrnru95g5TMwmrnLb3hGZed0sak+usl+gpps3R1ieZLxt/ckNTWSh8f62vEQ2bndAuqF2PUj0lWl3LspRPl/AQPRlZ9Vf1EFYTWRmy8znzCQs/G/01+u3HBid8CytlL7dOYx6ioZWpJuv/LeFR29VtmMouNRrZIFDxVqrHP2pod1GTR+nOrXxmkrpuwjwjP7ekl3ZcwlW01hw8JDTSbpPe6bticpm4hCVF83qBaY27B/V3Y3zBrkO5O45n21RWBEk4l/Vf2yy6J5Tc5Xi7kRdh89rx002XqauePSYP9dAu3qvZRPbYvsjz17J8r5lNPz3mgS5eadN1Cavo2e1lRpTsApYxO2Ml7bSfuBnomuzCSon1Oplxc9dD+0J+hCl52a2Uy0Kzrnzd1gnD3W1/Fg5d90zW2UXazYvvMfqtS4fRdbFOm1xCaSbVwt+eXQ1lRqlil3Zeele7HvuEnWffQmyPLnJ4rvfd+dIn5LjeplO4aG6fEer+uqcDN9K0KU/aMCt3xHFZ76k5LlwIle/n+9zIO5P//xSrolouX7OyuRuan/o4pfh+wO9vwG5rwPcdkFbGmKC5cxAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAfrn/ADCaOc2HgoxfAAAAAElFTkSuQmCC"></img>
+                    <strong class="tit_content">연구 및 자원활용 활성화</strong>
                     <p class="desc_item">아시아 문화 연구 및 자원 아카이빙</p>
                   </a>
                 </li>
                 <li>
                   <a href="#none">
-                    <div class="img_item" alt="콘텐츠 이미지"></div>
-                    <strong class="tit_item">콘텐츠 제작 운영</strong>
+                    <img class="img_item" alt="콘텐츠 이미지" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAnFBMVEX/3AAAAB//4gD/4AD/5AD/3gD/4QAABh8ACB//5gAABx8AAB792gARFB8ACx99bRhcUhnKrwxzZRfewAkeHh0HDh+kjxLuzgXStgtZTxrDqQ4oJh331QOqlBGBcRa9pA9pXRiMehU8NxwbHB4TFh5QRxpJQhu4nxCOfBU1MRzy0QavmBGXgxR4aRgxLRxAOhskIx3jxAhsXxhNRRpm5ptnAAAD50lEQVR4nO3Y2XajOhAFUJekAmSDZwbbGI/xnMHJ///bLQk7nYdOnnqgc89+sTFZLA4llURaLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD4f2Ctvzz9p+7jt+HT9Px5RG3y+A/ezG+herQ2n53UxYxO/3oVVRXtPk+4ICq/QcK3756w/fBVws4/n9D07gl/JHn/pvcUfoOE4cQnDE7KfXBgLGurfC5J2K0Tqrrfsg6UUR96r6w1uuGPQBL2XcJgQHO5VS7P/Q7R+OCDBedO6r+YYeHyay6yqncp1C2U1qPFfnAyjc5oHn1CnafJJuaW6pPTCZ/kwCVMXEKTEQ10S0/H/iz164FsBkd/+Fh+uWn4y8wwXJoW83PSzeU+9XQ5zctTRuFKihbMQxc7KChdusdQ0PNqPpeH0HNlN2dKx71Dn7ovTZ6s5tUltI8RDQJ3zEozs626T66GWTiOmU9JsvZV46tSQWBXqVtD+ErJJDbK3vI3lSR8NVINyj7epB74hbBOqHd1fVu3Lss5UaFlBqdJPUnnIV2bW0SzDId2ROGjvf3AWiklv/iEl/ZLy/ZCKoL730uBdWtDC0nYSSv/VLhMoyz46dWbwPTDXrxNJveer8r9papWw8QlVJf2LJD6nm/1ZWXy0eg6GktCqWS4rytrnru95g5TMwmrnLb3hGZed0sak+usl+gpps3R1ieZLxt/ckNTWSh8f62vEQ2bndAuqF2PUj0lWl3LspRPl/AQPRlZ9Vf1EFYTWRmy8znzCQs/G/01+u3HBid8CytlL7dOYx6ioZWpJuv/LeFR29VtmMouNRrZIFDxVqrHP2pod1GTR+nOrXxmkrpuwjwjP7ekl3ZcwlW01hw8JDTSbpPe6bticpm4hCVF83qBaY27B/V3Y3zBrkO5O45n21RWBEk4l/Vf2yy6J5Tc5Xi7kRdh89rx002XqauePSYP9dAu3qvZRPbYvsjz17J8r5lNPz3mgS5eadN1Cavo2e1lRpTsApYxO2Ml7bSfuBnomuzCSon1Oplxc9dD+0J+hCl52a2Uy0Kzrnzd1gnD3W1/Fg5d90zW2UXazYvvMfqtS4fRdbFOm1xCaSbVwt+eXQ1lRqlil3Zeele7HvuEnWffQmyPLnJ4rvfd+dIn5LjeplO4aG6fEer+uqcDN9K0KU/aMCt3xHFZ76k5LlwIle/n+9zIO5P//xSrolouX7OyuRuan/o4pfh+wO9vwG5rwPcdkFbGmKC5cxAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAfrn/ADCaOc2HgoxfAAAAAElFTkSuQmCC"></img>
+                    <strong class="tit_content">콘텐츠 제작 운영</strong>
                     <p class="desc_item">진취적인 공연예술 작품의 기획제작</p>
                   </a>
                 </li>
                 <li>
                   <a href="#none">
-                    <div class="img_item" alt="콘텐츠 이미지"></div>
-                    <strong class="tit_item">국내외 교류 유통</strong>
+                    <img class="img_item" alt="콘텐츠 이미지" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAnFBMVEX/3AAAAB//4gD/4AD/5AD/3gD/4QAABh8ACB//5gAABx8AAB792gARFB8ACx99bRhcUhnKrwxzZRfewAkeHh0HDh+kjxLuzgXStgtZTxrDqQ4oJh331QOqlBGBcRa9pA9pXRiMehU8NxwbHB4TFh5QRxpJQhu4nxCOfBU1MRzy0QavmBGXgxR4aRgxLRxAOhskIx3jxAhsXxhNRRpm5ptnAAAD50lEQVR4nO3Y2XajOhAFUJekAmSDZwbbGI/xnMHJ///bLQk7nYdOnnqgc89+sTFZLA4llURaLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD4f2Ctvzz9p+7jt+HT9Px5RG3y+A/ezG+herQ2n53UxYxO/3oVVRXtPk+4ICq/QcK3756w/fBVws4/n9D07gl/JHn/pvcUfoOE4cQnDE7KfXBgLGurfC5J2K0Tqrrfsg6UUR96r6w1uuGPQBL2XcJgQHO5VS7P/Q7R+OCDBedO6r+YYeHyay6yqncp1C2U1qPFfnAyjc5oHn1CnafJJuaW6pPTCZ/kwCVMXEKTEQ10S0/H/iz164FsBkd/+Fh+uWn4y8wwXJoW83PSzeU+9XQ5zctTRuFKihbMQxc7KChdusdQ0PNqPpeH0HNlN2dKx71Dn7ovTZ6s5tUltI8RDQJ3zEozs626T66GWTiOmU9JsvZV46tSQWBXqVtD+ErJJDbK3vI3lSR8NVINyj7epB74hbBOqHd1fVu3Lss5UaFlBqdJPUnnIV2bW0SzDId2ROGjvf3AWiklv/iEl/ZLy/ZCKoL730uBdWtDC0nYSSv/VLhMoyz46dWbwPTDXrxNJveer8r9papWw8QlVJf2LJD6nm/1ZWXy0eg6GktCqWS4rytrnru95g5TMwmrnLb3hGZed0sak+usl+gpps3R1ieZLxt/ckNTWSh8f62vEQ2bndAuqF2PUj0lWl3LspRPl/AQPRlZ9Vf1EFYTWRmy8znzCQs/G/01+u3HBid8CytlL7dOYx6ioZWpJuv/LeFR29VtmMouNRrZIFDxVqrHP2pod1GTR+nOrXxmkrpuwjwjP7ekl3ZcwlW01hw8JDTSbpPe6bticpm4hCVF83qBaY27B/V3Y3zBrkO5O45n21RWBEk4l/Vf2yy6J5Tc5Xi7kRdh89rx002XqauePSYP9dAu3qvZRPbYvsjz17J8r5lNPz3mgS5eadN1Cavo2e1lRpTsApYxO2Ml7bSfuBnomuzCSon1Oplxc9dD+0J+hCl52a2Uy0Kzrnzd1gnD3W1/Fg5d90zW2UXazYvvMfqtS4fRdbFOm1xCaSbVwt+eXQ1lRqlil3Zeele7HvuEnWffQmyPLnJ4rvfd+dIn5LjeplO4aG6fEer+uqcDN9K0KU/aMCt3xHFZ76k5LlwIle/n+9zIO5P//xSrolouX7OyuRuan/o4pfh+wO9vwG5rwPcdkFbGmKC5cxAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAfrn/ADCaOc2HgoxfAAAAAElFTkSuQmCC"></img>
+                    <strong class="tit_content">국내외 교류 유통</strong>
                     <p class="desc_item">
                       국제 문화외교에 기여 및 설립 목적 달성
                     </p>
@@ -99,8 +119,8 @@
                 </li>
                 <li>
                   <a href="#none">
-                    <div class="img_item" alt="콘텐츠 이미지"></div>
-                    <strong class="tit_item">대관</strong>
+                    <img class="img_item" alt="콘텐츠 이미지" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAnFBMVEX/3AAAAB//4gD/4AD/5AD/3gD/4QAABh8ACB//5gAABx8AAB792gARFB8ACx99bRhcUhnKrwxzZRfewAkeHh0HDh+kjxLuzgXStgtZTxrDqQ4oJh331QOqlBGBcRa9pA9pXRiMehU8NxwbHB4TFh5QRxpJQhu4nxCOfBU1MRzy0QavmBGXgxR4aRgxLRxAOhskIx3jxAhsXxhNRRpm5ptnAAAD50lEQVR4nO3Y2XajOhAFUJekAmSDZwbbGI/xnMHJ///bLQk7nYdOnnqgc89+sTFZLA4llURaLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD4f2Ctvzz9p+7jt+HT9Px5RG3y+A/ezG+herQ2n53UxYxO/3oVVRXtPk+4ICq/QcK3756w/fBVws4/n9D07gl/JHn/pvcUfoOE4cQnDE7KfXBgLGurfC5J2K0Tqrrfsg6UUR96r6w1uuGPQBL2XcJgQHO5VS7P/Q7R+OCDBedO6r+YYeHyay6yqncp1C2U1qPFfnAyjc5oHn1CnafJJuaW6pPTCZ/kwCVMXEKTEQ10S0/H/iz164FsBkd/+Fh+uWn4y8wwXJoW83PSzeU+9XQ5zctTRuFKihbMQxc7KChdusdQ0PNqPpeH0HNlN2dKx71Dn7ovTZ6s5tUltI8RDQJ3zEozs626T66GWTiOmU9JsvZV46tSQWBXqVtD+ErJJDbK3vI3lSR8NVINyj7epB74hbBOqHd1fVu3Lss5UaFlBqdJPUnnIV2bW0SzDId2ROGjvf3AWiklv/iEl/ZLy/ZCKoL730uBdWtDC0nYSSv/VLhMoyz46dWbwPTDXrxNJveer8r9papWw8QlVJf2LJD6nm/1ZWXy0eg6GktCqWS4rytrnru95g5TMwmrnLb3hGZed0sak+usl+gpps3R1ieZLxt/ckNTWSh8f62vEQ2bndAuqF2PUj0lWl3LspRPl/AQPRlZ9Vf1EFYTWRmy8znzCQs/G/01+u3HBid8CytlL7dOYx6ioZWpJuv/LeFR29VtmMouNRrZIFDxVqrHP2pod1GTR+nOrXxmkrpuwjwjP7ekl3ZcwlW01hw8JDTSbpPe6bticpm4hCVF83qBaY27B/V3Y3zBrkO5O45n21RWBEk4l/Vf2yy6J5Tc5Xi7kRdh89rx002XqauePSYP9dAu3qvZRPbYvsjz17J8r5lNPz3mgS5eadN1Cavo2e1lRpTsApYxO2Ml7bSfuBnomuzCSon1Oplxc9dD+0J+hCl52a2Uy0Kzrnzd1gnD3W1/Fg5d90zW2UXazYvvMfqtS4fRdbFOm1xCaSbVwt+eXQ1lRqlil3Zeele7HvuEnWffQmyPLnJ4rvfd+dIn5LjeplO4aG6fEer+uqcDN9K0KU/aMCt3xHFZ76k5LlwIle/n+9zIO5P//xSrolouX7OyuRuan/o4pfh+wO9vwG5rwPcdkFbGmKC5cxAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAfrn/ADCaOc2HgoxfAAAAAElFTkSuQmCC"></img>
+                    <strong class="tit_content">대관</strong>
                     <p class="desc_item">시민들의 문화향유 기회 확대</p>
                   </a>
                 </li>
@@ -126,25 +146,27 @@
             </section>
           </section>
           <section class="content-snb">
-            <h3 class="screen_out">사이드 바</h3>
+            <h3 class="screen_out">사이드 메뉴(해당 영역의 역할을 숨김 텍스트로 할 것!)</h3>
             <div class="snb_search">
-              <div class="tit_search">검색</div>
-              <form>
+              <div class="wrap_search">
+              <strong class="tit_search">검색</strong>
+            </div>
+              <div>
                 <input class="input_search" type="text" />
                 <button class="btn_search" type="submit">검색</button>
-              </form>
+              </div>
             </div>
             <div class="snb_quickmenu">
-              <div class="tit_quickmenu">Quick Menu</div>
-              <ul>
-                <li class="list_leftside">
+              <strong class="tit_quickmenu">Quick Menu</strong>
+              <ul class="list_snb">
+                <li>
                   <ul>
                     <li><a href="#none">정부혁신</a></li>
                     <li><a href="#none">ACI 소개</a></li>
                     <li><a href="#none">사회적가치</a></li>
                   </ul>
                 </li>
-                <li class="list_rightside">
+                <li>
                   <ul>
                     <li><a href="#none">주요사업</a></li>
                     <li><a href="#none">대관안내</a></li>
@@ -154,13 +176,13 @@
               </ul>
             </div>
             <div class="snb_cs">
-              <h3 class="tit_cs">고객센터</h3>
-              <div>1899-5566</div>
-              <div>09:00 - 18:00 / 매주 월 휴무</div>
-              <div>(예매업무 09:00 - 17:00)</div>
+              <h4 class="tit_cs">고객센터</h4>
+              <span>1899-5566<br></span>
+              <span>09:00 - 18:00 / 매주 월 휴무<br></span>
+              <span>(예매업무 09:00 - 17:00)</span>
             </div>
-            <div class="snb_etc"><a href="#none">ACC 도서관</a></div>
-            <div class="snb_etc"><a href="#none">ACC 아카이브</a></div>
+            <a href="#none" class="snb_etc">ACC 도서관</a>
+            <a href="#none" class="snb_etc">ACC 아카이브</a>
             <div class="snb_logo"><a href="#none">LOGO</a></div>
           </section>
           <article class="content-article">
@@ -173,48 +195,47 @@
                     <li><a href="#none">채용정보</a></li>
                     <li><a href="#none">보도자료</a></li>
                   </ul>
-                  <span>+</span>
+                  <button class="btn_information"><span class="screen_out">공지사항 더보기 버튼</span>+</button>
                 </div>
-                <div class="main_information">
                   <ul class="list_noticeboard">
                     <li>
                       <a href="#none">
-                        <span class="tit_noti">게시글 제목</span>
+                        <span>게시글 제목</span>
                         <span class="date_noti">게시글 날짜</span>
                       </a>
                     </li>
                     <li>
                       <a href="#none">
-                        <span class="tit_noti">게시글 제목</span>
+                        <span>게시글 제목</span>
                         <span class="date_noti">게시글 날짜</span>
                       </a>
                     </li>
                     <li>
                       <a href="#none">
-                        <span class="tit_noti">게시글 제목</span>
+                        <span>게시글 제목</span>
                         <span class="date_noti">게시글 날짜</span>
                       </a>
                     </li>
                     <li>
                       <a href="#none">
-                        <span class="tit_noti">게시글 제목</span>
+                        <span>게시글 제목</span>
                         <span class="date_noti">게시글 날짜</span>
                       </a>
                     </li>
                     <li>
                       <a href="#none">
-                        <span class="tit_noti">게시글 제목</span>
+                        <span>게시글 제목</span>
                         <span class="date_noti">게시글 날짜</span>
                       </a>
                     </li>
                   </ul>
-                </div>
+                
               </div>
 
               <div class="section_popup">
                 <div class="header_popup">
                   <strong>팝업존</strong>
-                  <button>x</button>
+                  <button><span class="screen_out">팝업 닫기 버튼</span>x</button>
                 </div>
                 <div class="item_popup"></div>
               </div>
@@ -225,7 +246,7 @@
                 <ul class="list_culture">
                   <li>
                     <a href="#none">
-                      <div class="img_culture" alt="문화 이미지"></div>
+                      <img class="img_culture" alt="문화 이미지" src="https://dummyimage.com/275x200/f0cb6b/000000.jpg"></img>
                       <p class="desc_culture">
                         [아시아의 문화Ⅱ] 이슬람 문화로 짜여진 터키의 카펫
                       </p>
@@ -233,7 +254,7 @@
                   </li>
                   <li>
                     <a href="#none">
-                      <div class="img_culture" alt="문화 이미지"></div>
+                      <img class="img_culture" alt="문화 이미지" src="https://dummyimage.com/275x200/f0cb6b/000000.jpg"></img>
                       <p class="desc_culture">
                         [아시아의 문화Ⅱ] 전쟁과 여성의 삶, 비랑고나 이야기
                       </p>
@@ -241,7 +262,7 @@
                   </li>
                   <li>
                     <a href="#none">
-                      <div class="img_culture" alt="문화 이미지"></div>
+                      <img class="img_culture" alt="문화 이미지" src="https://dummyimage.com/275x200/f0cb6b/000000.jpg"></img>
                       <p class="desc_culture">
                         [아시아의 문화Ⅱ] 표해록, 아시아 해양 문명 네트워크
                         ‘무한한 상상력’
@@ -250,7 +271,7 @@
                   </li>
                   <li>
                     <a href="#none">
-                      <div class="img_culture" alt="문화 이미지"></div>
+                      <img class="img_culture" alt="문화 이미지" src="https://dummyimage.com/275x200/f0cb6b/000000.jpg"></img>
                       <p class="desc_culture">
                         [아시아의 문화Ⅱ] 바닷길, 아시아를 잇다
                       </p>
