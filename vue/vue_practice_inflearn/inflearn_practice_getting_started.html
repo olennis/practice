@@ -7,8 +7,27 @@
     <title>Document</title>
   </head>
   <body>
-    <div>test</div>
-    <div>test222</div>
-    <div>ssh 테스트</div>
+    <div id="app">
+      {{ message }}
+      <doc-header></doc-header>
+      <doc-footer></doc-footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+      // 전역 컴포넌트
+      Vue.component("doc-header", { template: "<header>header</header>" });
+      new Vue({
+        el: "#app",
+        data: {
+          message: "hello, world",
+        },
+        //지역 컴포넌트
+        components: {
+          "doc-footer": {
+            template: "<footer>footer</footer>",
+          },
+        },
+      });
+    </script>
   </body>
 </html>
