@@ -9,22 +9,38 @@
   <body>
     <div id="app">
       {{ message }}
-      <doc-header></doc-header>
-      <doc-footer></doc-footer>
+      <props-test v-bind:propsdata="num"></props-test>
+      <emit-test v-on:add="addNumber"></emit-test>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script>
-      // 전역 컴포넌트
-      Vue.component("doc-header", { template: "<header>header</header>" });
+      var propstest = {
+        template: "<div>{{propsdata}}</div>",
+        props: ["propsdata"],
+      };
+      var emittest = {
+        template: "<button v-on:click='addNumber'>add</button>",
+        methods: {
+          addNumber: function () {
+            this.$emit("add");
+          },
+        },
+      };
+
       new Vue({
         el: "#app",
         data: {
           message: "hello, world",
+          num: 10,
         },
-        //지역 컴포넌트
+
         components: {
-          "doc-footer": {
-            template: "<footer>footer</footer>",
+          "props-test": propstest,
+          "emit-test": emittest,
+        },
+        methods: {
+          addNumber: function () {
+            this.num++;
           },
         },
       });
