@@ -8,9 +8,9 @@
   </head>
   <body>
     <div id="app">
-      {{ message }}
       <props-test v-bind:propsdata="num"></props-test>
       <emit-test v-on:add="addNumber"></emit-test>
+      <input type="text" v-on:keyup.enter="pressEnter" />
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script>
@@ -41,6 +41,11 @@
         methods: {
           addNumber: function () {
             this.num++;
+          },
+          pressEnter: function (event) {
+            console.log("enter!!");
+            event.preventDefault();
+            event.target.value = "";
           },
         },
       });
