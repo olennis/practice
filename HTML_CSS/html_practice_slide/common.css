@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  width: 400vw;
+
+  transition: transform 0.5s;
+}
+.box {
+  float: left;
+  width: 100vw;
+  float: left;
+  height: 1000px;
+  text-align: center;
+}
+.black {
+  background-color: black;
+}
+.red {
+  background-color: red;
+}
+.blue {
+  background-color: blue;
+}
+.pink {
+  background-color: pink;
+}
+
+.btn {
+  transition: 1s;
+}
+.active {
+  width: 50px;
+}
