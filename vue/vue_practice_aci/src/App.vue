@@ -8,15 +8,18 @@
     <div class="bnr_header"></div>
     <div class="container-doc">
       <Header></Header>
+      <Main></Main>
     </div>
   </div>
 </template>
 
 <script>
 import Header from "./components/Header.vue";
+import Main from "./components/Main.vue";
 export default {
   components: {
     Header,
+    Main,
   },
 };
 </script>
