@@ -1,11 +1,15 @@
 <template>
-  <div class="wrap_feature">
+  <div
+    class="wrap_feature"
+    v-on:mouseover="stopSlide"
+    v-on:mouseleave="startSlide"
+  >
     <div class="inner_feature" v-for="(list, idx) in notis" :key="idx">
       <img
         class="img_main"
         alt="메인 이미지"
         :src="list.img"
-        v-show="current === idx"
+        v-show="idx === current"
       />
 
       <button type="button" class="btn_prev" v-on:click="toPrev">
@@ -50,9 +54,11 @@
 export default {
   data: function() {
     return {
+      interval: null,
       prev: "<",
       next: ">",
       current: 0,
+      isStop: false,
       notis: [
         {
           tit_item: "1",
@@ -87,6 +93,7 @@ export default {
       ],
     };
   },
+
   methods: {
     changeActive(idx) {
       this.current = idx;
@@ -105,6 +112,16 @@ export default {
         this.current--;
       }
     },
+    startSlide() {
+      this.interval = setInterval(this.toNext, 3000);
+    },
+    stopSlide() {
+      clearInterval(this.interval);
+    },
+  },
+
+  mounted() {
+    this.startSlide();
   },
 };
 </script>
