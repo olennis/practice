@@ -161,6 +161,8 @@ var {
 }
 .container-doc {
   max-width: 1440px;
+  position: relative;
+  overflow: hidden;
   margin: 30px auto;
 }
 </style>

@@ -30,7 +30,6 @@ export default {
   name: "Header",
 };
 </script>
-
 <style>
 .doc-title {
   float: left;
@@ -41,6 +40,12 @@ export default {
   font-size: 15px;
   float: left;
 }
+@media (max-width: 1350px) {
+  .doc-gnb {
+    display: none;
+  }
+}
+
 .list_gnb {
   overflow: hidden;
   float: left;
