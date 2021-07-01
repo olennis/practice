@@ -18,36 +18,35 @@
       <button type="button" class="btn_next" v-on:click="toNext">
         <span class="screen_out">메인 이미지 슬라이드 다음</span>{{ next }}
       </button>
+      <transition name="fade">
+        <div class="wrap_noti" v-show="current === idx">
+          <strong class="tit_noti">문화원 소식</strong>
 
-      <div class="wrap_noti" v-show="current === idx">
-        <strong class="tit_noti">문화원 소식</strong>
-        <transition name="fade">
-          <div>
-            <strong class="tit_item">{{ list.tit_item }}</strong>
-            <p class="desc_noti">
-              {{ list.desc_noti }}
-            </p>
-            <p class="desc_noti">
-              {{ list.desc_noti2 }}
-            </p>
-          </div>
-        </transition>
-        <ul class="list_paging">
-          <li v-for="(paging, index) in notis" :key="index">
-            <button
-              type="button"
-              class="btn_paging"
-              v-on:click="changeActive(index)"
-            >
-              <span class="screen_out">{{ idx + 1 }}번 페이지</span>
-              <span
-                class="paging_main"
-                v-bind:class="{ paging_main_active: current === index }"
-              ></span>
-            </button>
-          </li>
-        </ul>
-      </div>
+          <strong class="tit_item">{{ list.tit_item }} </strong>
+          <p class="desc_noti">
+            {{ list.desc_noti }}
+          </p>
+          <p class="desc_noti">
+            {{ list.desc_noti2 }}
+          </p>
+
+          <ul class="list_paging">
+            <li v-for="(paging, index) in notis" :key="index">
+              <button
+                type="button"
+                class="btn_paging"
+                v-on:click="changeActive(index)"
+              >
+                <span class="screen_out">{{ idx + 1 }}번 페이지</span>
+                <span
+                  class="paging_main"
+                  v-bind:class="{ paging_main_active: current === index }"
+                ></span>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </transition>
     </div>
   </div>
 </template>
@@ -219,7 +218,7 @@ export default {
 }
 .fade-enter-active,
 .fade-leave-active {
-  transition: opacity 3s;
+  transition: opacity 0.5s;
 }
 .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
   opacity: 0;
