@@ -3,7 +3,7 @@
     <nuxt-link to="/search">to search</nuxt-link>
     <nuxt-link to="/about">to about</nuxt-link>
     <div>{{ text }}</div>
-    <span v-show="open">opentest class="wrap_open"</span>
+    <span v-show="open" class="wrap_open">dfdf</span>
     <button @click="isOpen">오픈테스트</button>
   </div>
 </template>
