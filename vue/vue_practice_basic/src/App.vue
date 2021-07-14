@@ -8,7 +8,6 @@
       <div>hello</div>
     </div>
   </div>
-  <div>mainconents</div>
 </template>
 
 <script>
