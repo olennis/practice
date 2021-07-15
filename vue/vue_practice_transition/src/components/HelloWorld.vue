@@ -1,5 +1,5 @@
 <template>
-  <div class="wrap_box">
+  <div>
     <div class="box red">1</div>
     <div class="box blue">2</div>
     <div class="box green">3</div>
@@ -12,10 +12,9 @@ export default {};
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
-.wrap_box {
-}
 .box {
   display: inline-block;
+  transform: translateY(1000px);
   width: 300px;
   height: 700px;
   margin: 10px;
@@ -29,18 +28,18 @@ export default {};
 } */
 @keyframes test {
   0% {
-    height: 0px;
+    transform: translateY(1000px);
   }
   100% {
-    height: 700px;
+    transform: translateY(0);
   }
 }
 .blue {
   background-color: blue;
-  animation: test 4s 3s 1 ease forwards normal;
+  animation: test 4s 2s 1 ease forwards normal;
 }
 .green {
   background-color: green;
-  animation: test 4s 6s 1 ease forwards normal;
+  animation: test 4s 4s 1 ease forwards normal;
 }
 </style>
