@@ -3,6 +3,7 @@
     <div class="box red">1</div>
     <div class="box blue">2</div>
     <div class="box green">3</div>
+    <div>test</div>
   </div>
 </template>
 
