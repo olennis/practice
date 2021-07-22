@@ -48,12 +48,12 @@ export default {
   transition: all 0.35s;
 }
 .toast-leave {
-  opacity: 0;
-  transform: translateY(-60px);
-}
-.toast-leave-to {
   opacity: 1;
   transform: translateY(0);
+}
+.toast-leave-to {
+  opacity: 0;
+  transform: translateY(-60px);
 }
 .toast-leave-active {
   transition: all 0.35s;
