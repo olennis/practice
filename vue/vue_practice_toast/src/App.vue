@@ -38,7 +38,7 @@ export default {
 }
 .toast-enter {
   opacity: 0;
-  transform: translateY(-60px);
+  transform: translateY(-100px);
 }
 .toast-enter-to {
   opacity: 1;
@@ -53,7 +53,7 @@ export default {
 }
 .toast-leave-to {
   opacity: 0;
-  transform: translateY(-60px);
+  transform: translateY(-100px);
 }
 .toast-leave-active {
   transition: all 0.35s;
