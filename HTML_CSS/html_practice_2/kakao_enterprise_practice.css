@@ -168,3 +168,9 @@ footer {
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
 }
+.practice_table {
+  overflow: hidden;
+}
+.practice_table li {
+  float: left;
+}
