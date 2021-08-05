@@ -84,12 +84,14 @@
       </li>
     </ul>
     <div class="test" :style="backgroundStyle"></div>
+    <div v-if="isTrue"></div>
   </div>
 </template>
 
 <script>
 export default {
   name: "HelloWorld",
+  isTrue: this.windowWidth(),
   props: {
     msg: String,
   },
@@ -100,6 +102,11 @@ export default {
         "--height": "30px",
         "--back": "red",
       };
+    },
+
+    windowWidth() {
+      if (window.innerWidth > 767) true;
+      else if (window.innerWidth <= 767) false;
     },
   },
 };
