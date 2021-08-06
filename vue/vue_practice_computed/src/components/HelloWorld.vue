@@ -84,14 +84,18 @@
       </li>
     </ul>
     <div class="test" :style="backgroundStyle"></div>
-    <div v-if="isTrue"></div>
+    <div>{{ changeMobile() }}</div>
   </div>
 </template>
 
 <script>
 export default {
   name: "HelloWorld",
-  isTrue: this.windowWidth(),
+  data() {
+    return {
+      isMobile: window.innerWidth,
+    };
+  },
   props: {
     msg: String,
   },
@@ -103,10 +107,9 @@ export default {
         "--back": "red",
       };
     },
-
-    windowWidth() {
-      if (window.innerWidth > 767) true;
-      else if (window.innerWidth <= 767) false;
+    changeMobile() {
+      if (this.isMobile > 767) return false;
+      else if (this.isMobile <= 767) return true;
     },
   },
 };
