@@ -1,14 +1,6 @@
 <template>
   <div class="hello">
-    <transition name="slide">
-      <h1>{{ msg }}</h1>
-    </transition>
-    <infinite-slide-bar :duration="speed" :direction="direction">
-      <div class="tit_tag">
-        #hash#hash#hash#hash#hash#hash#hash#hash#hash#hash#hash#hash#hash#hash#hash#hash#hash#hash
-      </div>
-    </infinite-slide-bar>
-    <button v-if="paused" @click="isPaused">start</button>
+    <h1>{{ msg }}</h1>
     <p>
       For a guide and recipes on how to configure / customize this project,<br />
       check out the
@@ -91,31 +83,34 @@
         >
       </li>
     </ul>
+    <div class="test" :style="backgroundStyle"></div>
+    <div>{{ changeMobile() }}</div>
   </div>
 </template>
 
 <script>
-import InfiniteSlideBar from "vue-infinite-slide-bar";
 export default {
-  data: function() {
+  name: "HelloWorld",
+  data() {
     return {
-      speed: "20s",
-      direction: "normal",
-      delay: "3s",
+      isMobile: window.innerWidth,
     };
   },
-  methods: {
-    isPaused: function() {
-      this.paused = !this.paused;
-      console.log(this.paused);
-    },
-  },
-  name: "HelloWorld",
   props: {
     msg: String,
   },
-  components: {
-    InfiniteSlideBar,
+  computed: {
+    backgroundStyle() {
+      return {
+        "--width": "30px",
+        "--height": "30px",
+        "--back": "red",
+      };
+    },
+    changeMobile() {
+      if (this.isMobile > 767) return false;
+      else if (this.isMobile <= 767) return true;
+    },
   },
 };
 </script>
@@ -136,16 +131,9 @@ li {
 a {
   color: #42b983;
 }
-.tit_tag {
-  font-family: TTNorms;
-  height: 50px;
-  font-size: 46px;
-  font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-
-  letter-spacing: normal;
-  text-align: left;
-  color: #000000;
+.test {
+  width: var(--width);
+  height: var(--height);
+  background-color: var(--back);
 }
 </style>
