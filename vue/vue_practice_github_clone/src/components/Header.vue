@@ -1,7 +1,9 @@
 <template>
   <header>
-    <h1>
-      <img class="img_logo" alt="logo" src="../assets/logo.png" />
+    <h1 class="doc-title">
+      <a href="/"
+        ><img class="img_logo" alt="logo" src="../assets/logo.png"
+      /></a>
     </h1>
     <div class="wrap_search">
       <input class="input_header" placeholder="search" />
