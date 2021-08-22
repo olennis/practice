@@ -7,7 +7,7 @@
     </h1>
     <div class="wrap_search">
       <input class="input_header" placeholder="search" />
-      <button class="btn_search">click</button>
+      <button class="btn_search">/</button>
     </div>
 
     <nav>
@@ -47,25 +47,34 @@ nav {
 .input_header {
   vertical-align: middle;
   margin-left: 12px;
-  min-height: 28px;
   background: none;
   border: 0;
   box-shadow: none;
   padding-bottom: 0;
   padding-top: 0;
-  width: 240px;
+  width: 210px;
   box-sizing: border-box;
 }
 .wrap_search {
   float: left;
-  padding: 5px 12px;
+  padding: 5px;
   width: 270px;
+  border: 1px solid rgb(70, 77, 85);
+  margin-left: 20px;
+  height: 20px;
+  line-height: 20px;
+  overflow: hidden;
+  border-radius: 8px;
 }
 .btn_search {
-  width: 20px;
+  min-width: 20px;
   height: 20px;
   vertical-align: middle;
-  overflow: hidden;
+  float: right;
+  background: none;
+  border: 1px solid rgb(70, 77, 85);
+  color: #707070;
+  border-radius: 5px;
 }
 .list_gnb {
   overflow: hidden;
