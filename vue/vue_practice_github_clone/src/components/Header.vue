@@ -27,8 +27,23 @@
     </nav>
     <div class="wrap_icons">
       <button type="button" class="ico_comm">알림</button>
-      <button type="button" class="ico_comm">메뉴</button>
+      <button
+        type="button"
+        class="ico_comm"
+        @click="menuModalHandler"
+        @blur="menuModalHandler"
+      >
+        메뉴
+      </button>
+
       <button type="button" class="ico_comm">프로필</button>
+      <div class="wrap_modal">
+        <ul>
+          <li>menu1</li>
+          <li>menu2</li>
+          <li>menu3</li>
+        </ul>
+      </div>
     </div>
   </header>
 </template>
@@ -37,12 +52,16 @@ export default {
   data() {
     return {
       isFocus: false,
+      menuModal: false,
     };
   },
   methods: {
     focusHandler() {
       this.isFocus = !this.isFocus;
       console.log(this.isFocus);
+    },
+    menuModalHandler() {
+      this.menuModal = !this.menuModal;
     },
   },
 };
@@ -56,13 +75,15 @@ header {
   padding: 16px 32px;
   box-sizing: border-box;
   overflow: hidden;
-  position: relative;
+  z-index: 1;
 }
 h1 {
   float: left;
 }
 nav {
   overflow: hidden;
+  width: 750px;
+  float: left;
 }
 
 .img_logo {
@@ -113,9 +134,9 @@ nav {
   font-weight: bold;
 }
 .wrap_icons {
-  position: absolute;
-  right: 30px;
-  top: 16px;
+  position: relative;
+  float: right;
+  z-index: 1;
 }
 .ico_comm + .ico_comm {
   margin-left: 10px;
@@ -131,6 +152,16 @@ nav {
 .input-click-leave-active {
   animation: all 0.8s;
 }
+.wrap_modal {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-color: #707070;
+  color: #000;
+  right: 10px;
+  z-index: 1000;
+}
+
 @keyframes input-click {
   0% {
     transition: all 0.3s;
