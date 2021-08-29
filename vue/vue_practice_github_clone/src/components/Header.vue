@@ -18,10 +18,29 @@
         <li><a>explore</a></li>
       </ul>
     </nav>
+    <div class="wrap_button">
+      <button class="btn_header btn_noti">알림</button>
+      <button @click="menuModalHandler" class="btn_header btn_menu">
+        메뉴
+      </button>
+      <button class="btn_header btn_profile">프로필</button>
+    </div>
   </header>
 </template>
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      isModalOpen: false,
+    };
+  },
+  methods: {
+    menuModalHandler() {
+      this.isModalOpen = !this.isModalOpen;
+      console.log(this.isModalOpen);
+    },
+  },
+};
 </script>
 <style>
 header {
@@ -32,6 +51,7 @@ header {
   padding: 16px 32px;
   box-sizing: border-box;
   overflow: hidden;
+  position: relative;
 }
 h1 {
   float: left;
@@ -83,5 +103,13 @@ nav {
 .list_gnb li {
   float: left;
   margin-left: 10px;
+}
+.btn_header {
+  margin-left: 10px;
+}
+.wrap_button {
+  position: absolute;
+  right: 20px;
+  top: 16px;
 }
 </style>

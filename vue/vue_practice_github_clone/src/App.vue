@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <Header />
+    <div class="wrap_modal">모달</div>
   </div>
 </template>
 
@@ -31,5 +32,12 @@ li {
 }
 a {
   text-decoration: none;
+}
+.wrap_modal {
+  background-color: #707070;
+  position: absolute;
+  z-index: 1;
+  right: 50px;
+  top: 0;
 }
 </style>
