@@ -1,17 +1,18 @@
 <template>
   <div id="app">
     <Header />
-    <div class="wrap_modal">모달</div>
+    <test-section></test-section>
   </div>
 </template>
 
 <script>
 import Header from "./components/Header.vue";
-
+import TestSection from "./components/TestSection.vue";
 export default {
   name: "App",
   components: {
     Header,
+    TestSection,
   },
 };
 </script>

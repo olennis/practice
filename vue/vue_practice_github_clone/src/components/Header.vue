@@ -5,25 +5,45 @@
         ><img class="img_logo" alt="logo" src="../assets/logo.png"
       /></a>
     </h1>
-    <div class="wrap_search">
-      <input class="input_header" placeholder="search" />
-      <button class="btn_search">/</button>
-    </div>
-
+    <transition name="input-click">
+      <div class="wrap_search" :class="{ wrap_search_active: isFocus }">
+        <input
+          class="input_header"
+          placeholder="search"
+          type="text"
+          @click="focusHandler"
+          @blur="focusHandler"
+        />
+        <button type="button" class="btn_search">/</button>
+      </div>
+    </transition>
     <nav>
       <ul class="list_gnb">
-        <li><a>pull request</a></li>
-        <li><a>issue</a></li>
-        <li><a>market place</a></li>
-        <li><a>explore</a></li>
+        <li><a class="link_gnb">pull request</a></li>
+        <li><a class="link_gnb">issue</a></li>
+        <li><a class="link_gnb">market place</a></li>
+        <li><a class="link_gnb">explore</a></li>
       </ul>
     </nav>
-    <div class="wrap_button">
-      <button class="btn_header btn_noti">알림</button>
-      <button @click="menuModalHandler" class="btn_header btn_menu">
+    <div class="wrap_icons">
+      <button type="button" class="ico_comm">알림</button>
+      <button
+        type="button"
+        class="ico_comm"
+        @click="menuModalHandler"
+        @blur="menuModalHandler"
+      >
         메뉴
       </button>
-      <button class="btn_header btn_profile">프로필</button>
+
+      <button type="button" class="ico_comm">프로필</button>
+      <div class="wrap_modal">
+        <ul>
+          <li>menu1</li>
+          <li>menu2</li>
+          <li>menu3</li>
+        </ul>
+      </div>
     </div>
   </header>
 </template>
@@ -31,13 +51,17 @@
 export default {
   data() {
     return {
-      isModalOpen: false,
+      isFocus: false,
+      menuModal: false,
     };
   },
   methods: {
+    focusHandler() {
+      this.isFocus = !this.isFocus;
+      console.log(this.isFocus);
+    },
     menuModalHandler() {
-      this.isModalOpen = !this.isModalOpen;
-      console.log(this.isModalOpen);
+      this.menuModal = !this.menuModal;
     },
   },
 };
@@ -51,13 +75,15 @@ header {
   padding: 16px 32px;
   box-sizing: border-box;
   overflow: hidden;
-  position: relative;
+  z-index: 1;
 }
 h1 {
   float: left;
 }
 nav {
   overflow: hidden;
+  width: 750px;
+  float: left;
 }
 
 .img_logo {
@@ -78,7 +104,7 @@ nav {
 .wrap_search {
   float: left;
   padding: 5px;
-  width: 270px;
+  width: 260px;
   border: 1px solid rgb(70, 77, 85);
   margin-left: 20px;
   height: 20px;
@@ -102,14 +128,50 @@ nav {
 }
 .list_gnb li {
   float: left;
+  margin-left: 20px;
+}
+.link_gnb {
+  font-weight: bold;
+}
+.wrap_icons {
+  position: relative;
+  float: right;
+  z-index: 1;
+}
+.ico_comm + .ico_comm {
   margin-left: 10px;
 }
-.btn_header {
-  margin-left: 10px;
+
+.wrap_search_active {
+  width: 300px;
 }
-.wrap_button {
+
+.input-click-enter-active {
+  animation: all 0.3s;
+}
+
+.input-click-leave-active {
+  animation: all 0.8s;
+}
+.wrap_modal {
   position: absolute;
-  right: 20px;
-  top: 16px;
+  width: 100px;
+  height: 100px;
+  background-color: #707070;
+  color: #000;
+  right: 10px;
+  z-index: 1000;
+}
+
+@keyframes input-click {
+  0% {
+    transition: all 0.3s;
+  }
+  50% {
+    transition: all 0.3s;
+  }
+  100% {
+    transition: all 0.3s;
+  }
 }
 </style>
