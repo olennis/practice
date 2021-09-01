@@ -37,23 +37,21 @@
       </button>
 
       <button type="button" class="ico_comm">프로필</button>
-      <div class="wrap_modal">
-        <ul>
-          <li>menu1</li>
-          <li>menu2</li>
-          <li>menu3</li>
-        </ul>
-      </div>
     </div>
+    <header-modal v-if="menuModal"></header-modal>
   </header>
 </template>
 <script>
+import HeaderModal from "./HeaderModal.vue";
 export default {
   data() {
     return {
       isFocus: false,
       menuModal: false,
     };
+  },
+  components: {
+    HeaderModal,
   },
   methods: {
     focusHandler() {
@@ -75,7 +73,6 @@ header {
   padding: 16px 32px;
   box-sizing: border-box;
   overflow: hidden;
-  z-index: 1;
 }
 h1 {
   float: left;
@@ -151,26 +148,5 @@ nav {
 
 .input-click-leave-active {
   animation: all 0.8s;
-}
-.wrap_modal {
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  background-color: #707070;
-  color: #000;
-  right: 10px;
-  z-index: 1000;
-}
-
-@keyframes input-click {
-  0% {
-    transition: all 0.3s;
-  }
-  50% {
-    transition: all 0.3s;
-  }
-  100% {
-    transition: all 0.3s;
-  }
 }
 </style>
