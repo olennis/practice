@@ -138,6 +138,7 @@ nav {
 .ico_comm + .ico_comm {
   margin-left: 10px;
 }
+
 .wrap_search_active {
   width: 300px;
 }
