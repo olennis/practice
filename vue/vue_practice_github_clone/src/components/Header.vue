@@ -77,7 +77,7 @@ header {
 h1 {
   float: left;
 }
-nav {
+header nav {
   overflow: hidden;
   width: 750px;
   float: left;
