@@ -110,6 +110,9 @@ var {
   position: fixed;
   top: 0;
   left: 0;
+  height: 60px;
+  line-height: 24px;
+  vertical-align: middle;
 }
 .doc-header .doc-title {
   float: left;
@@ -118,14 +121,23 @@ var {
 .doc-header .doc-title a {
   color: #fff;
 }
+
 .doc-gnb .list_menu {
   overflow: hidden;
+  text-align: center;
   margin: 0 auto;
 }
 .doc-gnb .list_menu li {
-  float: left;
+  display: inline-block;
+  margin-right: 50px;
 }
 .doc-gnb .list_menu li a {
   color: #fff;
   font-size: 25px;
+}
+.doc-header .wrap_btn {
+  float: right;
+}
+.wrap_btn button {
+  color: #fff;
 }
