@@ -125,7 +125,6 @@ var {
 .doc-gnb .list_menu {
   overflow: hidden;
   text-align: center;
-  margin: 0 auto;
 }
 .doc-gnb .list_menu li {
   display: inline-block;
@@ -135,9 +134,27 @@ var {
   color: #fff;
   font-size: 25px;
 }
-.doc-header .wrap_btn {
+.doc-header .list_btn {
   float: right;
 }
-.wrap_btn button {
+.list_btn li {
+  float: left;
+  background-color: red;
+  margin-right: 10px;
+  height: 30px;
+  border-radius: 15px;
+  line-height: 30px;
+  padding: 0 10px;
+}
+
+.list_btn li .btn_header {
   color: #fff;
+  box-sizing: border-box;
+}
+.list_btn li .txt_item {
+  color: #fff;
+}
+.list_btn li .txt_item:first-child::after {
+  content: "|";
+  margin: 0 5px;
 }
