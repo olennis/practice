@@ -1,12 +1,15 @@
 <template>
   <div id="app">
-    <h1>vue_practice</h1>
-    <input type="text" />
-    <button @click="isOpen">click me!</button>
-    <div v-show="popup" class="wrap_popup">
-      <div>popup</div>
-      <div>hello</div>
-    </div>
+    <section>
+      <ul class="list_test">
+        <li class="red"></li>
+        <li class="blue"></li>
+        <li class="green"></li>
+        <li class="yellow"></li>
+        <li class="pink"></li>
+        <li class="black"></li>
+      </ul>
+    </section>
   </div>
 </template>
 
@@ -31,13 +34,38 @@ export default {
 #app {
   position: relative;
 }
-.wrap_popup {
-  position: absolute;
-  background-color: #808080;
-  width: 100px;
-  height: 200px;
-  color: #fff;
-  left: 200px;
-  top: 80px;
+section {
+  max-width: 1400px;
+  margin: 0 auto;
+  background-color: #909090;
+}
+.list_test {
+  overflow: hidden;
+}
+.list_test li {
+  list-style: none;
+  float: left;
+  width: 400px;
+  height: 300px;
+  margin: 20px;
+}
+.red {
+  background-color: red;
+}
+.blue {
+  background-color: blue;
+}
+.yellow {
+  background-color: yellow;
+}
+.green {
+  background-color: green;
+}
+.black {
+  background-color: black;
+}
+
+.pink {
+  background-color: pink;
 }
 </style>
