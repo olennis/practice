@@ -46,7 +46,7 @@ section {
   list-style: none;
   float: left;
   width: 400px;
-  height: 300px;
+  height: 400px;
   margin: 20px;
 }
 .red {
