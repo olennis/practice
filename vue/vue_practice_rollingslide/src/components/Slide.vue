@@ -14,23 +14,25 @@
         <span class="ico_comm ico_link"></span>
       </a>
     </div>
-    <ul class="list_paging">
-      <li v-for="(paging, idx) in slides" :key="`carrousel_${idx}`">
-        <button
-          type="button"
-          class="btn_paging"
-          @click="changeActive(idx)"
-          :class="{ btn_paging_active: current === idx }"
-        >
-          <span class="screen_out">{{ idx + 1 }}번 페이지</span>
-          <span
-            class="paging_main"
-            :class="{ paging_main_active: current === index }"
-          ></span>
-        </button>
-      </li>
-    </ul>
-    <button @click="stopSlide">stop</button>
+    <div class="wrap_carrousel">
+      <ul class="list_paging">
+        <li v-for="(paging, idx) in slides" :key="`carrousel_${idx}`">
+          <button
+            type="button"
+            class="btn_paging"
+            @click="changeActive(idx)"
+            :class="{ btn_paging_active: current === idx }"
+          >
+            <span class="screen_out">{{ idx + 1 }}번 페이지</span>
+            <span
+              class="paging_main"
+              :class="{ paging_main_active: current === idx }"
+            ></span>
+          </button>
+        </li>
+      </ul>
+      <button class="btn_stop" @click="stopSlide">stop</button>
+    </div>
   </section>
 </template>
 <script>
@@ -233,13 +235,13 @@ var {
   color: yellow;
   margin-top: 50px;
 }
-.list_paging {
+.wrap_carrousel {
   position: absolute;
-  overflow: hidden;
   bottom: 50px;
   left: 100px;
-  margin: 0;
-  padding: 0;
+}
+.list_paging {
+  overflow: hidden;
 }
 .list_paging li {
   float: left;
@@ -256,5 +258,11 @@ var {
 }
 .btn_paging_active {
   background-color: red;
+}
+.btn_stop {
+  position: absolute;
+  bottom: 0;
+  left: 250px;
+  color: #fff;
 }
 </style>
