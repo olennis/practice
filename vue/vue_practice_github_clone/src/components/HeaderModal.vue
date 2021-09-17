@@ -1,7 +1,10 @@
 <template>
   <div class="wrap_modal">
     <ul class="list_modal">
-      <li v-for="(num, idx) in 5" :key="idx">{{ num }}</li>
+      <li>메뉴 1</li>
+      <li>메뉴 2</li>
+      <li>메뉴 3</li>
+      <li>메뉴 4</li>
     </ul>
   </div>
 </template>
