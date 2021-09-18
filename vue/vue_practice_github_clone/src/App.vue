@@ -3,10 +3,10 @@
     <Header />
     <nav class="nav_subnav">
       <ul class="list_subnav">
-        <li>overview</li>
-        <li>repositories</li>
-        <li>projects</li>
-        <li>packages</li>
+        <li class="active"><a>overview</a></li>
+        <li><a>repositories</a></li>
+        <li><a>projects</a></li>
+        <li><a>packages</a></li>
       </ul>
     </nav>
     <div class="side_nav">side nav</div>
@@ -45,16 +45,20 @@ a {
   text-decoration: none;
 }
 .nav_subnav {
-  margin-left: 625px;
-  overflow: hidden;
+  border-bottom: 1px solid #909090;
+  padding-top: 30px;
 }
 .list_subnav {
-  overflow: hidden;
+  text-align: center;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 .list_subnav li {
-  float: left;
+  display: inline-block;
   margin-left: 30px;
+  height: 30px;
 }
-.side_nav {
+.list_subnav .active {
+  border-bottom: 1px solid red;
 }
 </style>
