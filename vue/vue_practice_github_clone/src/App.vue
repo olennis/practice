@@ -3,10 +3,14 @@
     <Header />
     <nav class="nav_subnav">
       <ul class="list_subnav">
-        <li class="active"><a>overview</a></li>
-        <li><a>repositories</a></li>
-        <li><a>projects</a></li>
-        <li><a>packages</a></li>
+        <li
+          v-for="(title, idx) in titles"
+          :key="idx"
+          :class="{ active: idx === current }"
+          @click="changeCurrent(idx)"
+        >
+          <a>{{ title.title }}</a>
+        </li>
       </ul>
     </nav>
     <div class="side_nav">side nav</div>
@@ -21,8 +25,24 @@
 import Header from "./components/Header.vue";
 export default {
   name: "App",
+  data() {
+    return {
+      current: 0,
+      titles: [
+        { title: "overview" },
+        { title: "repositories" },
+        { title: "projects" },
+        { title: "packages" },
+      ],
+    };
+  },
   components: {
     Header,
+  },
+  methods: {
+    changeCurrent(idx) {
+      this.current = idx;
+    },
   },
 };
 </script>
