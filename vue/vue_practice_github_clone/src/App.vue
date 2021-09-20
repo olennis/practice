@@ -78,6 +78,9 @@ a {
   margin-left: 30px;
   height: 30px;
 }
+.list_subnav li a {
+  cursor: pointer;
+}
 .list_subnav .active {
   border-bottom: 1px solid red;
 }
