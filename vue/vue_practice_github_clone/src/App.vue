@@ -13,7 +13,7 @@
         </li>
       </ul>
     </nav>
-    <div class="side_nav">side nav</div>
+    <side-nav></side-nav>
     <div>
       <div>content1</div>
       <div>content2</div>
@@ -23,6 +23,7 @@
 
 <script>
 import Header from "./components/Header.vue";
+import SideNav from "./components/sideNav.vue";
 export default {
   name: "App",
   data() {
@@ -38,6 +39,7 @@ export default {
   },
   components: {
     Header,
+    SideNav,
   },
   methods: {
     changeCurrent(idx) {
