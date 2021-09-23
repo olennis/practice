@@ -15,7 +15,7 @@
     </nav>
     <side-nav></side-nav>
     <div>
-      <div>content1</div>
+      <pin></pin>
       <div>content2</div>
     </div>
   </div>
@@ -24,6 +24,7 @@
 <script>
 import Header from "./components/Header.vue";
 import SideNav from "./components/sideNav.vue";
+import Pin from "./components/Pin.vue";
 export default {
   name: "App",
   data() {
@@ -40,6 +41,7 @@ export default {
   components: {
     Header,
     SideNav,
+    Pin,
   },
   methods: {
     changeCurrent(idx) {
