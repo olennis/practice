@@ -1,6 +1,6 @@
 <template>
   <div class="pin">
-    <ul>
+    <ul class="list_pin">
       <li>1</li>
       <li>2</li>
       <li>3</li>
@@ -16,5 +16,13 @@ export default {};
 <style>
 .pin {
   margin: 20px 0 0 500px;
+}
+.list_pin {
+  overflow: hidden;
+}
+.list_pin li {
+  float: left;
+  width: calc(50% - 40px);
+  margin: 20px;
 }
 </style>
