@@ -14,7 +14,7 @@
       </ul>
     </nav>
     <side-nav></side-nav>
-    <div>
+    <div class="wrap_cont">
       <pin></pin>
       <div>content2</div>
     </div>
@@ -87,5 +87,8 @@ a {
 }
 .list_subnav .active {
   border-bottom: 1px solid red;
+}
+.wrap_cont {
+  padding-right: 200px;
 }
 </style>
