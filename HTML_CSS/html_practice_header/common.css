@@ -1,160 +1,31 @@
-/* reset */
-body,
-div,
-dl,
-dt,
-dd,
-ul,
-ol,
-li,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-pre,
-code,
-form,
-fieldset,
-legend,
-textarea,
-p,
-blockquote,
-th,
-td,
-input,
-select,
-button {
-  margin: 0;
-  padding: 0;
+.container {
+  background-color: black;
+  width: 100%;
+  justify-content: center;
 }
-fieldset,
-img {
-  border: 0 none;
-}
-dl,
-ul,
-ol,
-menu,
 li {
   list-style: none;
 }
-blockquote,
-q {
-  quotes: none;
-}
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: "";
-  content: none;
-}
-input,
-select,
-textarea,
-button {
-  vertical-align: middle;
-}
-input::-ms-clear {
-  display: none;
-}
-button {
-  border: 0 none;
-  background-color: transparent;
-  cursor: pointer;
-}
-body {
-  background: #fff;
-}
-body,
-th,
-td,
-input,
-select,
-textarea,
-button {
-  font-size: 12px;
-  line-height: 1.5;
-  font-family: "돋움", dotum, sans-serif;
-  color: #333;
-} /* color값은 디자인가이드에 맞게사용 */
-a {
-  color: #333;
-  text-decoration: none;
-}
-a:active,
-a:hover {
-  text-decoration: underline;
-}
-a:active {
-  background-color: transparent;
-}
-address,
-caption,
-cite,
-code,
-dfn,
-em,
-var {
-  font-style: normal;
-  font-weight: normal;
+li,
+div {
+  width: 100px;
+  height: 100px;
+  display: flex;
 }
 
-.container-doc .doc-header {
-  background-color: #000;
-  padding: 18px;
-  box-sizing: border-box;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 60px;
-  line-height: 24px;
-  vertical-align: middle;
-}
-.doc-header .doc-title {
-  float: left;
-  margin-right: 30px;
-}
-.doc-header .doc-title a {
-  color: #fff;
-}
-
-.doc-gnb .list_menu {
-  overflow: hidden;
-  text-align: center;
-}
-.doc-gnb .list_menu li {
-  display: inline-block;
-  margin-right: 50px;
-}
-.doc-gnb .list_menu li a {
-  color: #fff;
-  font-size: 25px;
-}
-.doc-header .list_btn {
-  float: right;
-}
-.list_btn li {
-  float: left;
+.red {
   background-color: red;
-  margin-right: 10px;
-  height: 30px;
-  border-radius: 15px;
-  line-height: 30px;
-  padding: 0 10px;
+}
+.blue {
+  background-color: blue;
+}
+.green {
+  background-color: green;
+}
+.yellow {
+  background-color: yellow;
 }
 
-.list_btn li .btn_header {
-  color: #fff;
-  box-sizing: border-box;
-}
-.list_btn li .txt_item {
-  color: #fff;
-}
-.list_btn li .txt_item:first-child::after {
-  content: "|";
-  margin: 0 5px;
+.pink {
+  background-color: pink;
 }
