@@ -181,7 +181,7 @@ export default {
 }
 .tit_item {
   display: block;
-  font-size: 30px;
+  font-size: 29px;
   margin: 30px;
 }
 .desc_noti {
