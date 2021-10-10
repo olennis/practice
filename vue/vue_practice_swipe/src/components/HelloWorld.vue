@@ -1,10 +1,18 @@
 <template>
-  <swiper>
-    <swiper-slide>1</swiper-slide>
-    <swiper-slide>2</swiper-slide>
-    <swiper-slide>3</swiper-slide>
-    <swiper-slide>4</swiper-slide>
-  </swiper>
+  <div>
+    <swiper>
+      <swiper-slide>1</swiper-slide>
+      <swiper-slide>2</swiper-slide>
+      <swiper-slide>3</swiper-slide>
+      <swiper-slide>4</swiper-slide>
+    </swiper>
+    <ul>
+      <li>paging btn1</li>
+      <li>paging btn2</li>
+      <li>paging btn3</li>
+      <li>paging btn4</li>
+    </ul>
+  </div>
 </template>
 
 <script>
