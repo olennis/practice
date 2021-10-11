@@ -1,6 +1,6 @@
 <template>
   <div>
-    <swiper>
+    <swiper @slideChange="slideChange">
       <swiper-slide>1</swiper-slide>
       <swiper-slide>2</swiper-slide>
       <swiper-slide>3</swiper-slide>
@@ -23,6 +23,11 @@ export default {
   components: {
     swiper,
     swiperSlide,
+  },
+  methods: {
+    slideChange() {
+      console.log("!!");
+    },
   },
 };
 </script>
