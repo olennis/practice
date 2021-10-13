@@ -1,6 +1,6 @@
 <template lang="">
   <div>
-    test
+    믹스인 연습
   </div>
 </template>
 <script>
