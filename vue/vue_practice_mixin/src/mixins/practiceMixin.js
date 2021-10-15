@@ -1,7 +1,12 @@
 export const practiceMixin = {
   methods: {
     practiceMixin() {
-      console.log("i wanna use Mixin");
+      console.log(this.test);
     },
+  },
+  data() {
+    return {
+      test: "??",
+    };
   },
 };
