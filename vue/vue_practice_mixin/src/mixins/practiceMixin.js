@@ -3,10 +3,14 @@ export const practiceMixin = {
     practiceMixin() {
       console.log(this.test);
     },
+    plus() {
+      this.num += 1;
+    },
   },
   data() {
     return {
-      test: "??",
+      test: "this is mixin's test",
+      num: 0,
     };
   },
 };
