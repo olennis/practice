@@ -1,10 +1,33 @@
 <template>
   <div>
     <swiper @slideChange="slideChange">
-      <swiper-slide>1</swiper-slide>
-      <swiper-slide>2</swiper-slide>
-      <swiper-slide>3</swiper-slide>
-      <swiper-slide>4</swiper-slide>
+      <swiper-slide>
+        <img
+          :src="require(`@/assets/images/connect_01@2x_mo.png`)"
+          alt=""
+          class="connect__img"
+        />
+      </swiper-slide>
+      <swiper-slide>
+        <img
+          :src="require(`@/assets/images/connect_02@2x_mo.png`)"
+          alt=""
+          class="connect__img"
+        />
+      </swiper-slide>
+      <swiper-slide>
+        <img
+          :src="require(`@/assets/images/connect_03@2x_mo.png`)"
+          alt=""
+          class="connect__img"
+      /></swiper-slide>
+      <swiper-slide>
+        <img
+          :src="require(`@/assets/images/connect_04@2x_mo.png`)"
+          alt=""
+          class="connect__img"
+        />
+      </swiper-slide>
     </swiper>
     <ul>
       <li>paging btn1</li>
@@ -59,5 +82,16 @@ a {
 }
 .d4 {
   background: yellow;
+}
+
+.connect__img {
+  border-radius: 0;
+  max-width: 392px;
+  width: 100%;
+  position: static;
+  transform: none;
+  height: 285px;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translateZ(0);
 }
 </style>
