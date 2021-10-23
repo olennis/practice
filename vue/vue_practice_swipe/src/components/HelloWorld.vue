@@ -2,31 +2,14 @@
   <div>
     <swiper @slideChange="slideChange">
       <swiper-slide>
-        <img
-          :src="require(`@/assets/images/connect_01@2x_mo.png`)"
-          alt=""
-          class="connect__img"
-        />
+        <img alt="" class="connect__img" />
       </swiper-slide>
       <swiper-slide>
-        <img
-          :src="require(`@/assets/images/connect_02@2x_mo.png`)"
-          alt=""
-          class="connect__img"
-        />
+        <img alt="" class="connect__img" />
       </swiper-slide>
+      <swiper-slide> <img alt="" class="connect__img"/></swiper-slide>
       <swiper-slide>
-        <img
-          :src="require(`@/assets/images/connect_03@2x_mo.png`)"
-          alt=""
-          class="connect__img"
-      /></swiper-slide>
-      <swiper-slide>
-        <img
-          :src="require(`@/assets/images/connect_04@2x_mo.png`)"
-          alt=""
-          class="connect__img"
-        />
+        <img alt="" class="connect__img" />
       </swiper-slide>
     </swiper>
     <ul>
