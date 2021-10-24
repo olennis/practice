@@ -1,96 +1,35 @@
 <template lang="">
-  <div class="wrapper">
-    <div class="images">
-      <div
-        class="div_swipe div1"
-        @touchstart="touchStart"
-        @touchend="touchEnd"
-      ></div>
-      <div
-        class="div_swipe div2"
-        @touchstart="touchStart"
-        @touchend="touchEnd"
-      ></div>
-      <div
-        class="div_swipe div3"
-        @touchstart="touchStart"
-        @touchend="touchEnd"
-      ></div>
-      <div
-        class="div_swipe div4"
-        @touchstart="touchStart"
-        @touchend="touchEnd"
-      ></div>
-    </div>
-  </div>
+  <transition-group name="swipe">
+    <div class="swipe_div" key="1" v-if="current === 1" @click="next">1</div>
+    <div class="swipe_div" key="2" v-if="current === 2">2</div>
+  </transition-group>
 </template>
 <script>
 export default {
   data() {
     return {
-      current: 0,
-      position: 0,
-      startX: null,
-      endX: null,
-      divWidth: 375,
+      current: 1,
     };
   },
   methods: {
-    prev() {
-      const images = document.querySelector(".images");
-      if (this.current > 0) {
-        this.position += this.divWidth;
-        images.style.transform = `translateX(${this.position}px)`;
-        this.current = this.current - 1;
-      }
-    },
     next() {
-      const images = document.querySelector(".images");
-      if (this.current < 3) {
-        this.position -= this.divWidth;
-        images.style.transform = `translateX(${this.position}px)`;
-        this.current = this.current + 1;
-      }
-    },
-    touchStart(event) {
-      this.startX = event.touches[0].pageX;
-    },
-    touchEnd(event) {
-      this.endX = event.changedTouches[0].pageX;
-      if (this.startX > this.endX) {
-        this.next();
-      } else {
-        this.prev();
-      }
+      this.current += 1;
     },
   },
 };
 </script>
 <style scope>
-.wrapper {
-  overflow: hidden;
-  width: 375px;
-  height: 300px;
+.swipe_div {
+  float: left;
 }
-.images {
-  position: relative;
-  display: flex;
-  height: 300px;
-  transition: transform 0.5s;
+.swipe-enter-active {
+  transition: all 0.3s ease;
 }
-.div_swipe {
-  width: 375px;
+.swipe-leave-active {
+  transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
 }
-.div1 {
-  background: red;
-}
-.div2 {
-  background: blue;
-}
-.div3 {
-  background: green;
-}
-.div4 {
-  background: yellow;
+.swipe-enter, .swipe-leave-to
+/* .slide-fade-leave-active below version 2.1.8 */ {
+  transform: translateX(-30px);
 }
 </style>
