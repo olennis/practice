@@ -15,6 +15,9 @@ export default new Vuex.Store({
     minusNum: (state) => {
       state.countNum -= 1;
     },
+    add5Num: (state) => {
+      state.countNum += 5;
+    },
   },
   actions: {},
 });
