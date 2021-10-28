@@ -3,6 +3,7 @@
     <header><button @click="sideMenuHandler">header</button></header>
     <div class="sideMenu" :class="{ sideMenuOpen: isSideMenuOpen }">
       <button @click="sideMenuHandler">close</button>
+      <h2>page</h2>
     </div>
   </div>
 </template>
@@ -59,7 +60,9 @@ header button {
   background-color: rgb(0, 154, 200);
   overflow-x: hidden;
   transition: 0.5s ease-in-out;
-  padding-top: 60px;
+}
+.sideMenu button {
+  float: left;
 }
 .sideMenuOpen {
   width: 80%;

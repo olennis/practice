@@ -2,17 +2,30 @@
   <div id="app">
     <HelloWorld msg="Welcome to Your Vue.js App" />
     <img alt="Vue logo" src="./assets/logo.png" />
-    <div class="red"></div>
-    <div class="red"></div>
-    <div class="red"></div>
-    <div class="red"></div>
-    <div class="red"></div>
-    <div class="red"></div>
-    <div class="red"></div>
-    <div class="red"></div>
-    <div class="red"></div>
-    <div class="red"></div>
-    <div class="red"></div>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur aliquam
+      totam incidunt sunt, amet nobis facere assumenda? Excepturi praesentium
+      nesciunt rerum in quisquam aliquam eligendi commodi quas labore? Ad,
+      accusantium.
+    </p>
+    <h3>Title</h3>
+    <div><span>date</span></div>
+    <div id="sky">
+      <img />
+      <ul class="list_mail">
+        <li v-for="(mail, idx) in mailList" :key="idx" :style="mail.style">
+          {{ mail.idx }}
+        </li>
+      </ul>
+      <button type="button" @click="makeMail">click</button>
+    </div>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia beatae
+      culpa similique, pariatur facere corporis quo aspernatur accusantium
+      maiores nulla error, ipsum magni voluptate. Placeat dolores facilis libero
+      eius quia.
+    </p>
+    <a href="#none">go!</a>
   </div>
 </template>
 
@@ -23,6 +36,29 @@ export default {
   name: "App",
   components: {
     HelloWorld,
+  },
+  data() {
+    return {
+      mailList: [],
+    };
+  },
+  mounted() {
+    //setInterval(this.makeMail, 1000);
+  },
+  methods: {
+    makeMail() {
+      let mail = {
+        style: {
+          width: "50px",
+          height: "50px",
+          margin: "0 auto",
+          background: "yellow",
+          position: "relative",
+          transform: `rotate(${Math.floor(Math.random() * 180) + 0}deg)`,
+        },
+      };
+      this.mailList.push(mail);
+    },
   },
 };
 </script>
@@ -35,10 +71,23 @@ export default {
   text-align: center;
   color: #2c3e50;
   overflow: hidden;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+ul {
+  padding: 0;
+  list-style: none;
 }
 .red {
   width: 200px;
   height: 200px;
+  background: red;
+}
+.item {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
   background: red;
 }
 </style>
