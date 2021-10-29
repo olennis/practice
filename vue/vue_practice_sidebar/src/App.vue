@@ -49,12 +49,9 @@ export default {
     makeMail() {
       let mail = {
         style: {
-          width: "50px",
-          height: "50px",
-          margin: "0 auto",
-          background: "yellow",
-          position: "relative",
-          transform: `rotate(${Math.floor(Math.random() * 180) + 0}deg)`,
+          transform: `rotate(${
+            Math.floor(Math.random() * 180) + 0
+          }deg) translateX(${Math.floor(Math.random() * 180) + 0}px)`,
         },
       };
       this.mailList.push(mail);
@@ -74,6 +71,10 @@ export default {
   max-width: 1024px;
   margin: 0 auto;
 }
+#sky {
+  background: blue;
+  height: 400px;
+}
 ul {
   padding: 0;
   list-style: none;
@@ -89,5 +90,28 @@ ul {
   height: 100px;
   margin: 0 auto;
   background: red;
+}
+.list_mail {
+  position: relative;
+  height: 200px;
+}
+.list_mail li {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  left: 48%;
+  background: green;
+  animation: mail 1s ease-in 0s 1 forwards;
+}
+@keyframes mail {
+  0% {
+    bottom: 200px;
+  }
+  50% {
+  }
+
+  100% {
+    bottom: 0px;
+  }
 }
 </style>
