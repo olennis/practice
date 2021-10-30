@@ -43,7 +43,7 @@ export default {
     };
   },
   mounted() {
-    //setInterval(this.makeMail, 1000);
+    setInterval(this.makeMail, 1000);
   },
   methods: {
     makeMail() {
