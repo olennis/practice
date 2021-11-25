@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+.header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  background-color: black;
+  z-index: 4;
+  opacity: 0.5;
+}
+.section_intro {
+  background-color: pink;
+  font-size: 30px;
+  font-weight: bold;
+  height: 100vh;
+  overflow: hidden;
+  text-align: center;
+}
+.section_intro .btn_blue {
+}
+.section_intro .wrap_cont {
+  display: flex;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+.section_intro .btn_scroll {
+  display: block;
+}
+.section_intro .txt_intro {
+}
+.section_intro .wrap_img {
+  width: 200px;
+  height: 200px;
+  border: 1px solid blue;
+  margin-left: 200px;
+}
+.section_blue {
+  height: 100vh;
+  background-color: blue;
+  position: relative;
+  z-index: 3;
+}
+.item_slide {
+  width: 200px;
+  height: 200px;
+  border: 1px solid yellow;
+}
+.item_slide01 {
+  background-color: red;
+}
+.item_slide02 {
+  background-color: white;
+}
+.item_slide03 {
+  background-color: gray;
+}
+.item_slide04 {
+  background-color: aqua;
+}
+.item_slide05 {
+  background-color: pink;
+}
+.item_slide06 {
+  background-color: palegoldenrod;
+}
+.section_marquee .wrap_marquee {
+  height: 20vh;
+
+  background-color: black;
+  color: tomato;
+  overflow: hidden;
+}
+.section_marquee .wrap_marquee2 {
+  height: 20vh;
+  background-color: black;
+  color: tomato;
+  overflow: hidden;
+}
+.wrap_marquee .list_marquee {
+  height: 100%;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  animation: rtl 10s linear infinite;
+  padding: 0;
+}
+@keyframes rtl {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-200vw);
+  }
+}
+.wrap_marquee .list_marquee li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20vw;
+  flex-shrink: 0;
+  white-space: nowrap;
+  font-size: 5rem;
+}
+.wrap_marquee2 .list_marquee {
+  height: 100%;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  animation: ltr 10s linear infinite;
+}
+@keyframes ltr {
+  0% {
+    transform: translateX(-200vw);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.wrap_marquee2 .list_marquee li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20vw;
+  flex-shrink: 0;
+  white-space: nowrap;
+  font-size: 5rem;
+}
