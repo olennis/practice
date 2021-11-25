@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+
+  </head>
+  <body>
+    <header class='header'>헤더</header>
+    <main>
+      <section class="section_intro">
+        
+        <div class="wrap_cont">
+            <button class="btn_blue">파란색 버튼</button>
+          <span class="txt_intro">
+            글1 어쩌구 <br />
+            글2 어쩌구<br />
+            글3 어쩌구 저쩌구
+          </span>
+          <img class="wrap_img"></img>
+          <button class="btn_scroll">스크롤 업!</button>
+        </div>
+        
+      </section>
+      <section class="section_blue">
+          <div class="wrap_slide">
+            <div class="item_slide item_slide01">1</div>
+            <div class="item_slide item_slide02">2</div>
+            <div class="item_slide item_slide03">3</div>
+            <div class="item_slide item_slide04">4</div>
+            <div class="item_slide item_slide05">5</div>
+            <div class="item_slide item_slide06">6</div>
+          </div>
+          <span class="num_choose">1 / 6</span>
+      </section>
+      <section class="section_marquee">
+          <div class="wrap_marquee">
+              <ul class="list_marquee">
+                  <li>1</li>
+                  <li>2</li>
+                  <li>3</li>
+                  <li>4</li>
+                  <li>5</li>
+                  <li>6</li>
+                  <li>7</li>
+                  <li>8</li>
+                  <li>9</li>
+                  <li>10</li>
+                  <li>1</li>
+                  <li>2</li>
+                  <li>3</li>
+                  <li>4</li>
+                  <li>5</li>
+              </ul>
+          </div>
+          <div class="wrap_marquee2">
+            <ul class="list_marquee">
+                <li>6</li>
+                <li>7</li>
+                <li>8</li>
+                <li>9</li>
+                <li>10</li>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+                <li>6</li>
+                <li>7</li>
+                <li>8</li>
+                <li>9</li>
+                <li>10</li>
+               
+               
+            </ul>
+        </div>
+      </section>
+    </main>
+    <footer>푸터</footer>
+    <script src='index.js'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+        $(".wrap_slide").slick({
+            dots:true,
+  infinite: true, //양방향 무한 모션
+  speed: 300, // 슬라이드 스피드
+  slidesToShow: 1,
+});
+$('.wrap_slide').on('beforeChange', function (event, slick, currentSlide,nextSlide) {
+        const numEl = document.querySelector('.num_choose')
+        numEl.innerText = `${nextSlide + 1}  /  ${slick.slideCount}`;
+        });
+    </script>
+  </body>
+</html>
