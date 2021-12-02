@@ -85,12 +85,12 @@ body {
   color: tomato;
   overflow: hidden;
 }
-.section_marquee .wrap_marquee2 {
+/* .section_marquee .wrap_marquee2 {
   height: 20vh;
   background-color: black;
   color: tomato;
   overflow: hidden;
-}
+} */
 .wrap_marquee .list_marquee {
   height: 100%;
   list-style: none;
@@ -116,13 +116,13 @@ body {
   white-space: nowrap;
   font-size: 5rem;
 }
-.wrap_marquee2 .list_marquee {
+/* .wrap_marquee2 .list_marquee {
   height: 100%;
   list-style: none;
   display: flex;
   align-items: center;
   animation: ltr 10s linear infinite;
-}
+} */
 @keyframes ltr {
   0% {
     transform: translateX(-200vw);
