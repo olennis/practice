@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "./App.css";
+import Hello from "./components/Hello";
 
 function App() {
   const [isStart, setIsStart] = useState(false);
@@ -44,6 +45,7 @@ function App() {
       </div>
       <button onClick={startHandler}>start</button>
       <button onClick={stopHandler}>stop</button>
+      <Hello></Hello>
     </div>
   );
 }
