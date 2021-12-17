@@ -1,1 +1,3 @@
-const graphqlYogo = require('graphql-yoga')
+import { GraphQLServer } from 'graphql-yoga';
+
+console.log('hellod')
