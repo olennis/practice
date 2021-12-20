@@ -4,7 +4,7 @@ import { userState } from "../atoms/userState";
 
 function Login() {
   const loginHandler = () => {
-    console.log("login");
+    console.log(loginState);
   };
   const inputHandler = (e: ChangeEvent<HTMLInputElement>) => {
     setLoginState({
