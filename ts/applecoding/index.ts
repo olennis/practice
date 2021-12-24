@@ -1,13 +1,13 @@
-type test = {
+type Test = {
   name: string;
   age: number;
 };
-const person: test = {
+const person: Test = {
   name: "donghun",
   age: 40,
 };
 
-const people: test[] = [
+const people: Test[] = [
   {
     name: "donghun",
     age: 10,
@@ -25,3 +25,8 @@ const people: test[] = [
     age: 10,
   },
 ];
+//narrowing, assertion
+function test(x: number | string) {
+  let arr: number[] = [];
+  arr[0] = x as number; // 타입 변경이 아닌 유니언 타입 구분용 문법 as, 비상용
+}
