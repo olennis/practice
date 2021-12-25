@@ -30,3 +30,7 @@ function test(x: number | string) {
   let arr: number[] = [];
   arr[0] = x as number; // 타입 변경이 아닌 유니언 타입 구분용 문법 as, 비상용
 }
+let literalTest: string | number;
+function literalFunction(a) {
+  literalTest = 3;
+}
