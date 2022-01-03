@@ -9,7 +9,7 @@ const GET_QUERY = gql`
   }
 `;
 function App() {
-  const { loading, error, data } = useQuery(GET_QUERY);
+  const { data } = useQuery(GET_QUERY);
   const btnHandler = (e) => {
     console.log(data);
   };
