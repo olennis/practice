@@ -1,6 +1,7 @@
 import React from "react";
 import { gql } from "apollo-boost";
 import { useQuery } from "@apollo/react-hooks";
+import Header from "./Header/Header";
 const GET_QUERY = gql`
   {
     people {
@@ -15,6 +16,7 @@ function App() {
   };
   return (
     <div>
+      <Header></Header>
       <button onClick={btnHandler}>click</button>
     </div>
   );
