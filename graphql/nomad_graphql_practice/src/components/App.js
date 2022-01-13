@@ -18,6 +18,7 @@ function App() {
     <div>
       <Header></Header>
       <button onClick={btnHandler}>click</button>
+      <button></button>
     </div>
   );
 }
