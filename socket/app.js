@@ -10,10 +10,13 @@ app.get("/", (req, res) => {
 });
 
 io.on("connection", (socket) => {
-  console.log("a user connected");
-  socket.on("disconnect", () => {
-    console.log("user disconnected");
+  socket.on("chat message", (msg) => {
+    io.emit("chat message", msg);
   });
+});
+io.emit("some event", {
+  someProperty: "some value",
+  otherProperty: "other value",
 });
 
 server.listen(3000, () => {
