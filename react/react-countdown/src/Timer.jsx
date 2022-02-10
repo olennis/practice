@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 const Timer = ({ setCorrectTime }) => {
   const [min, setMin] = useState(1);
   const [sec, setSec] = useState(0);
+  const [isHere, setIsHere] = useState(false);
 
   useEffect(() => {
     const countdown = setInterval(() => {
@@ -20,6 +21,7 @@ const Timer = ({ setCorrectTime }) => {
         }
       }
     }, 1000);
+
     return () => clearInterval(countdown);
   }, [sec]);
   return (

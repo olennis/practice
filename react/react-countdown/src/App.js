@@ -4,7 +4,7 @@ import Timer from "./Timer";
 function App() {
   const [correctTime, setCorrectTime] = useState(false);
 
-  const settingTime = ["18:41:45", "11:00:00", "12:00:00"];
+  const settingTime = ["12:10:50", "11:00:00", "12:00:00"];
   const isCorrectTime = () => {
     const date = new Date();
     const hour =
