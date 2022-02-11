@@ -21,7 +21,7 @@ const Timer = ({ setCorrectTime }) => {
         }
       }
     }, 1000);
-
+    //settimeout 으로 수정할것!
     return () => clearInterval(countdown);
   }, [sec]);
   return (
