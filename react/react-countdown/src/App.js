@@ -4,7 +4,15 @@ import Timer from "./Timer";
 function App() {
   const [correctTime, setCorrectTime] = useState(false);
 
-  const settingTime = ["12:10:50", "11:00:00", "12:00:00"];
+  const currentTime = new Date();
+  const settingTime = new Date(2022, 1, 17, 11, 51, 0);
+  const test = () => {
+    alert(new Date());
+  };
+  console.log("currentTime", currentTime, "settingTime", settingTime);
+  console.log(settingTime.getTime() - currentTime.getTime());
+
+  setTimeout(test, settingTime.getTime() - currentTime.getTime());
   const isCorrectTime = () => {
     const date = new Date();
     const hour =
@@ -18,10 +26,6 @@ function App() {
       setCorrectTime(true);
     }
   };
-
-  useEffect(() => {
-    setInterval(isCorrectTime, 1000);
-  }, []);
 
   return (
     <div className="App">
