@@ -9,8 +9,6 @@ function App() {
   const test = () => {
     alert(new Date());
   };
-  console.log("currentTime", currentTime, "settingTime", settingTime);
-  console.log(settingTime.getTime() - currentTime.getTime());
 
   setTimeout(test, settingTime.getTime() - currentTime.getTime());
   const isCorrectTime = () => {
