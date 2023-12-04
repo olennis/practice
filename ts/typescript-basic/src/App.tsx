@@ -11,6 +11,15 @@ function App() {
   const [isAdd, setIsAdd] = useState(false);
   const [inputValue, setInputValue] = useState("");
   const addTodo = () => {};
+
+  function addEL  (el:HTMLElement, fn:(this:HTMLElement,e:KeyboardEvent)=>void) {
+  
+    el.addEventListener('keydown', e=> {
+      fn.call(el,e)
+    })
+  }
+  
+
   return (
     <div className="App">
       <div>

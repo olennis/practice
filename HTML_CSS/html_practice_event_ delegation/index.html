@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <ul id="myList">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+        </ul>
+        <script>
+            document.getElementById('myList').addEventListener('click', function (event) {
+  // 클릭된 요소의 내용을 콘솔에 출력합니다.
+  console.log('클릭된 항목:', event.target.textContent);
+});
+        </script>
+    </div>
+</body>
+</html>
